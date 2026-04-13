@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/hyj/lxx/LBT_SD/LBT-for-merge/build/cmake_install.cmake",
+		"/home/hyj/lxx/LBT_SD/LBT-for-merge/build/src/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
