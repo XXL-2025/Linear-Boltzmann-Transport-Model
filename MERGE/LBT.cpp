@@ -197,8 +197,10 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
   //...np number of partons in current step
   //...nj number of jet partons 
   cout << "np:" << np << "  " << "nj:" << nj << endl;
+  cout << "maxcolor:" << maxColor << endl;
     for(int i=1;i<=np;i++)
 	{
+		if (abs(KATT1[i]) == 5) { preKT = alphas / 0.3; } //??-1-12
 	
     icl22=0;
     qt=0;
@@ -812,7 +814,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 		  T=temp0;
 		  KATTC0=KATT1[i];
 
-		  if (abs(KATT1[i]) == 4) {//xx-25-12-14
+		  if (abs(KATT1[i]) == 4) {
 			  runKT = 4.0 * pi / 9.0 / log(2.0 * E * T / 0.04) / 0.3;
 			  cout << "E:" << E << " " << "T:" << T << endl;
 			  preKTXX = fixAlphas / 0.3;
@@ -824,6 +826,18 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 			  Kfactor = KPfactor * KTfactor * KTfactor * runKT * preKTXX;
 	
 		  }
+
+		  else if (abs(KATT1[i]) == 5) {
+			  runKT = 4.0 * pi / 9.0 / log(2.0 * E * T / 0.04) / 0.3;
+			  lamXX(KATTC0, RTE, striRTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2);
+			  KPfactor = 1.0;
+			  KTfactor = 1.0;
+			  KPfactor = 1.0 + KPampb * exp(-PLen * PLen / 2.0 / KPsigb / KPsigb);
+			  KTfactor = 1.0 + KTampb * exp(-pow((temp0 - hydro_Tc), 2) / 2.0 / KTsigb / KTsigb);
+			  Kfactor = KPfactor * KTfactor * KTfactor * runKT * preKT;
+		  }
+
+
 //........get scattering number in the current step
 		  else { lam(KATTC0, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2); }
 
@@ -871,7 +885,14 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
                       RTE2=(qhatHQXX[iT2][iE2]-qhatHQXX[iT1][iE2])*(T-T1)/(T2-T1)+qhatHQXX[iT1][iE2];
 					  striRTE1 = (striqhatHQ[iT2][iE1] - striqhatHQ[iT1][iE1]) * (T - T1) / (T2 - T1) + striqhatHQ[iT1][iE1];//xx-12-14
 					  striRTE2 = (striqhatHQ[iT2][iE2] - striqhatHQ[iT1][iE2]) * (T - T1) / (T2 - T1) + striqhatHQ[iT1][iE2];//xx-12-14
-                  } else {
+                  } 
+				  
+				  else if (KATTC0 == 5 || KATTC0 == -5) { //??-1-12
+					  RTE1 = (qhatHQb[iT2][iE1] - qhatHQb[iT1][iE1]) * (T - T1) / (T2 - T1) + qhatHQb[iT1][iE1];
+					  RTE2 = (qhatHQb[iT2][iE2] - qhatHQb[iT1][iE2]) * (T - T1) / (T2 - T1) + qhatHQb[iT1][iE2];
+				  }
+
+				  else {
                       RTE1=(qhatLQ[iT2][iE1]-qhatLQ[iT1][iE1])*(T-T1)/(T2-T1)+qhatLQ[iT1][iE1];
                       RTE2=(qhatLQ[iT2][iE2]-qhatLQ[iT1][iE2])*(T-T1)/(T2-T1)+qhatLQ[iT1][iE2];
                   }
@@ -884,6 +905,11 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 					  qhatTP = qhatTP * Kfactor + striqhatTP;
 					
 				  }
+
+				  else if (abs(KATTC0) == 5) {//??-1-12
+					  qhatTP = qhatTP * Kfactor;
+				  }
+
 				  else {//xx-25-12-14
 					  qhatTP = qhatTP * preKT * preKT;
 				  }
@@ -943,7 +969,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 //          if (KATT1[i] == 21) radng[i] = 0.5 * nHQgluon(KATT1[i],dt_lrf,Tdiff,temp0,E,maxFncHQ) *preKT;		  
 //          else radng[i] = nHQgluon(KATT1[i],dt_lrf,Tdiff,temp0,E,maxFncHQ) *preKT;		  
           if (KATT1[i] == 21) radng[i] = nHQgluon(KATT1[i],dt_lrf,Tdiff,temp0,E,maxFncHQ) *preKT;	
-		  else if (abs(KATT1[i]) == 4) {//xx-25-12-14
+		  else if (abs(KATT1[i]) == 4 || abs(KATT1[i]) == 5) {//??-1-12
 			  radng[i] += nHQgluonXX(KATT1[i], dt_lrf, Tdiff, temp0, E, maxFncHQ) * KTfactor * runKT;
 		//	  cout << "nHQgluon:" << nHQgluonXX(KATT1[i], dt_lrf, Tdiff, temp0, E, maxFncHQ) << endl;
 			 cout << "KTfactor:" << KTfactor << "  " << "runKT:" << runKT << endl;
@@ -965,7 +991,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 		  
           lim_low=sqrt(6.0*pi*alphas)*temp0/E;
 //          lim_low=sqrt(6.0*pi*0.3)*temp0/E;
-          if(abs(KATT1[i])==4) lim_high=1.0;
+          if(abs(KATT1[i])==4 || abs(KATT1[i]) == 5) lim_high=1.0; //??-1-12
           else lim_high=1.0-lim_low;
           lim_int=lim_high-lim_low;
           if(lim_int>0.0) probRad=1.0-exp(-radng[i]);
@@ -998,6 +1024,14 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 				  cout << "totprob:" << probTot << endl;
 				  Reactionrate = probTot;
 			  }
+			  if (abs(KATT1[i]) == 5) {  //??-1-12
+				  V[0][i] = V[0][i] - fraction * dt * RTE / 0.1970 * sqrt(pow(P[1][i], 2) + pow(P[2][i], 2) + pow(P[3][i], 2)) / P[0][i];
+				  probCol = fraction * dt_lrf * RTE / 0.1970;
+				  probCol = probCol * KPfactor * KTfactor * runKT;
+				  probCol = (1.0 - exp(-probCol)) * (1.0 - probRad);
+				  probTot = probCol + probRad;
+				  Reactionrate = probTot;
+			  }
 		  }
 
 
@@ -1017,6 +1051,14 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 			  
 		  }
 
+		  else if (Kradiation == 0 && abs(KATT1[i]) == 5) {//??-1-12
+			  V[0][i] = V[0][i] - fraction * dt * RTE / 0.1970 * sqrt(pow(P[1][i], 2) + pow(P[2][i], 2) + pow(P[3][i], 2)) / P[0][i];
+			  probCol = fraction * dt_lrf * RTE / 0.1970;
+			  probRad = 0.0;
+			  probCol = probCol * KPfactor * KTfactor * runKT;
+			  probCol = (1.0 - exp(-probCol)) * (1.0 - probRad);
+			  probTot = probCol + probRad;
+		  }
           else
           {
 		  probNrad=0.0;
@@ -1073,7 +1115,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 			  
 
 
-			  if (abs(KATT1[i]) == 4) { //xx-25-12-14
+			  if (abs(KATT1[i]) == 4 || abs(KATT1[i]) == 5) { //??-1-12
 				  RTE = RTE * preKTXX * runKT + striRTE;
 				  flavorXX(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2);
 			  }
@@ -1090,7 +1132,9 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 			
 				  collHQ22Qg(CT, temp0, qhat0, vc0, pc0, pc2, pc3, pc4, qt);
 			  }
-
+			  else if (abs(KATT1[i]) == 5) {
+				  collHQ22XXX(CT, temp0, qhat0, vc0, pc0, pc2, pc3, pc4, qt, KATT1[i]); 
+			  }
 			  else { // for light parton scattering
 				  colljet22(CT, temp0, qhat0, vc0, pc0, pc2, pc3, pc4, qt);
 			  }
@@ -1114,7 +1158,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 //			  if(pc0[0]<pc2[0] && abs(KATTC0)!=4 && KATTC0==KATT2) { //disable switch for heavy quark, only allow switch for identical particles			  
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////...new
 
-			     if(pc0[0]<pc2[0] && abs(KATTC0) != 4)
+			     if(pc0[0]<pc2[0] && abs(KATTC0) != 4 && abs(KATTC0) != 5)//??-1-12
 				 {
 				  for(int k=0;k<=3;k++)
 					{                 
@@ -1125,7 +1169,200 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 			      KATT1[i]=KATT2;
      			  KATT1[np0]=KATTC0;
 				 }
-//
+
+
+				 // SC:color assign color to jet parton 0, recoil 2 and negative 3   //??-1-12
+		
+					 int parentColor = color[i];  // color of the incoming jet parton
+					 int parentAntiColor = anticolor[i];
+					 switch (CT) {
+					 case 1: // gg->gg
+						 maxColor++;
+						 color[i] = parentColor;
+						 anticolor[i] = maxColor;
+						 color[np0] = maxColor;
+						 maxColor++;
+						 anticolor[np0] = maxColor;
+						 color0[np0] = parentAntiColor;
+						 anticolor0[np0] = maxColor;
+						 break;
+					 case 2: // gg->qqbar
+						 if (KATT1[i] > 0) { // final jet parton is quark
+							 color[i] = parentColor;
+							 anticolor[i] = 0;
+							 maxColor++;
+							 color[np0] = 0;
+							 anticolor[np0] = maxColor;
+							 color0[np0] = parentAntiColor;
+							 anticolor0[np0] = maxColor;
+						 }
+						 else { // final jet parton is antiquark
+							 color[i] = 0;
+							 anticolor[i] = parentAntiColor;
+							 maxColor++;
+							 color[np0] = maxColor;
+							 anticolor[np0] = 0;
+							 color0[np0] = maxColor;
+							 anticolor0[np0] = parentColor;
+						 }
+						 break;
+					 case 3: // gq->qq or gqbar->gqbar
+						 if (KATT1[np0] > 0) { // gq->gq
+							 maxColor++;
+							 color[i] = parentColor;
+							 anticolor[i] = maxColor;
+							 color[np0] = maxColor;
+							 anticolor[np0] = 0;
+							 color0[np0] = parentAntiColor;
+							 anticolor0[np0] = 0;
+						 }
+						 else { // gqbar->gqbar
+							 maxColor++;
+							 color[i] = maxColor;
+							 anticolor[i] = parentAntiColor;
+							 color[np0] = 0;
+							 anticolor[np0] = maxColor;
+							 color0[np0] = 0;
+							 anticolor0[np0] = parentColor;
+						 }
+						 break;
+					 case 13: // qg->qg or qbarg->qbarg
+					 case 12: // Qg->Qg or Qbarg->Qbarg
+						 if (KATT1[i] > 0) { // qg->qg
+							 maxColor++;
+							 color[i] = maxColor;
+							 anticolor[i] = 0;
+							 anticolor[np0] = maxColor;
+							 maxColor++;
+							 color[np0] = maxColor;
+							 color0[np0] = maxColor;
+							 anticolor0[np0] = parentColor;
+						 }
+						 else { // qbarg->qbarg
+							 maxColor++;
+							 color[i] = 0;
+							 anticolor[i] = maxColor;
+							 color[np0] = maxColor;
+							 maxColor++;
+							 anticolor[np0] = maxColor;
+							 color0[np0] = parentAntiColor;
+							 anticolor0[np0] = maxColor;
+						 }
+						 break;
+					 case 4: // scatterings between different-flavor light quarks (antiquarks)
+					 case 5: // scatterings between same-flavor light quarks (antiquarks) -- only use the first and fourth if's below
+					 case 7: // qqbar->qqbar same-flavor paritcle-anti-particle scattering -- only use the second and third if's below, some part of this channel should be moved to annihilation process in the future
+					 case 11: // scatterings between heavy and light quarks (antiquarks)    
+						 if (KATT1[i] > 0 && KATT1[np0] > 0) { // qq'->qq'
+							 maxColor++;
+							 color[i] = maxColor;
+							 anticolor[i] = 0;
+							 color[np0] = parentColor;
+							 anticolor[np0] = 0;
+							 color0[np0] = maxColor;
+							 anticolor0[np0] = 0;
+						 }
+						 else if (KATT1[i] > 0 && KATT1[np0] < 0) { // qq'bar->qq'bar
+							 maxColor++;
+							 color[i] = maxColor;
+							 anticolor[i] = 0;
+							 color[np0] = 0;
+							 anticolor[np0] = maxColor;
+							 color0[np0] = 0;
+							 anticolor0[np0] = parentColor;
+						 }
+						 else if (KATT1[i] < 0 && KATT1[np0]>0) { // qbarq'->qbarq'
+							 maxColor++;
+							 color[i] = 0;
+							 anticolor[i] = maxColor;
+							 color[np0] = maxColor;
+							 anticolor[np0] = 0;
+							 color0[np0] = parentAntiColor;
+							 anticolor0[np0] = 0;
+						 }
+						 else { // qbarq'bar->qbarq'bar
+							 maxColor++;
+							 color[i] = 0;
+							 anticolor[i] = maxColor;
+							 color[np0] = 0;
+							 anticolor[np0] = parentAntiColor;
+							 color0[np0] = 0;
+							 anticolor0[np0] = maxColor;
+						 }
+						 break;
+					 case 6: // qqbar annihilation to q'q'bar 
+						 //if(KATT1[i]>0 && KATT1[np0]>0) { // +- -> +-
+						 if (parentColor > 0 && KATT1[i] > 0) { // +- -> +-
+							 maxColor++;
+							 color[i] = parentColor;
+							 anticolor[i] = 0;
+							 color[np0] = 0;
+							 anticolor[np0] = maxColor;
+							 color0[np0] = 0;
+							 anticolor0[np0] = maxColor;
+							 //} else if(KATT1[i]>0 && KATT1[np0]<0) { // +- -> -+
+						 }
+						 else if (parentColor > 0 && KATT1[i] < 0) { // +- -> -+
+							 maxColor++;
+							 color[i] = 0;
+							 anticolor[i] = maxColor;
+							 color[np0] = parentColor;
+							 anticolor[np0] = 0;
+							 color0[np0] = 0;
+							 anticolor0[np0] = maxColor;
+							 //} else if(KATT1[i]<0 && KATT1[np0]>0) { // -+ -> +-
+						 }
+						 else if (parentColor == 0 && KATT1[i] > 0) { // -+ -> +-
+							 maxColor++;
+							 color[i] = maxColor;
+							 anticolor[i] = 0;
+							 color[np0] = 0;
+							 anticolor[np0] = parentAntiColor;
+							 color0[np0] = maxColor;
+							 anticolor0[np0] = 0;
+						 }
+						 else { // -+ -> -+
+							 maxColor++;
+							 color[i] = 0;
+							 anticolor[i] = parentAntiColor;
+							 color[np0] = maxColor;
+							 anticolor[np0] = 0;
+							 color0[np0] = maxColor;
+							 anticolor0[np0] = 0;
+						 }
+						 break;
+					 case 8: // qqbar annihilation to gg                          
+						 //if(KATT1[i]>0) { // incoming jet parton is quark
+						 if (parentColor > 0) { // incoming jet parton is quark
+							 maxColor++;
+							 color[i] = parentColor;
+							 anticolor[i] = maxColor;
+							 color[np0] = maxColor;
+							 maxColor++;
+							 anticolor[np0] = maxColor;
+							 color0[np0] = 0;
+							 anticolor0[np0] = maxColor;
+						 }
+						 else { // incoming jet parton is antiquark
+							 maxColor++;
+							 color[i] = maxColor;
+							 anticolor[i] = parentAntiColor;
+							 anticolor[np0] = maxColor;
+							 maxColor++;
+							 color[np0] = maxColor;
+							 color0[np0] = maxColor;
+							 anticolor0[np0] = 0;
+						 }
+						 break;
+					 default:
+						 cout << "Waning: unrecognized channel number for elastic scattering!" << endl;
+						 exit(EXIT_FAILURE);
+					 } // end switch for selecting scattering channel
+					 //cout << CT << "  " << parentColor << "  " << parentAntiColor << "  " << color[i] << "  " << anticolor[i] << "  " << color[np0] << "  " << anticolor[np0] << "  " << color0[np0] << "  " << anticolor0[np0] << endl;
+					 //cout << "newly produced: " << np0 << "  " << color0[np0] << "  " << anticolor0[np0] << endl;
+					 //if(fabs(ti-11.3) < epsilon) cout << CT << "  " << np0 << "  " << KATT1[i] << "  " << KATT1[np0] << "  " << color[np0] << "  " << anticolor[np0] << endl;
+			
+
 			    for(int j=0;j<=3;j++)
 				{
 //			    if(i<=nj) // always make sure the jet parton carries the largest momentum (maybe now all the parton includes recoiled for there could be multiple scattering in a single time step)
@@ -1151,7 +1388,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 
 //...Scattering between P0[i] and the newest negative parton  
 
-                if(CAT0[i] == 0 && abs(KATT10[i]) != 4)
+                if(CAT0[i] == 0 && abs(KATT10[i]) != 4 && abs(KATT10[i]) != 5)  //??-1-12
                 {
                 
                 if(free0 == 0)
@@ -1236,6 +1473,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 			  cout << "Ejp:" << EjpXX << "  " << "qhat0:" << qhat0 << endl;
 			  cout << "prob23:" << probRad / probTot << endl;
 			  if (abs(KATT1[i]) != 4 && ran0(&NUM1) < probNrad / Reactionrate && Kradiation == 1 && qt != 0) { Krad = 1; }//xx-10-21
+			  else if (abs(KATT1[i]) == 5 && ran0(&NUM1) < probRad / probTot && Kradiation == 1 && qt > epsilonXX && EjpXX > 2 * sqrt(qhat0)) { Krad = 1; }//??-1-12
 			  else if (abs(KATT1[i]) == 4 && ran0(&NUM1) < probRad / probTot && Kradiation == 1 && qt > epsilonXX && EjpXX > 2 * sqrt(qhat0)) { Krad = 1; }
                 else Krad=0;			  			  	//xx-25-12-14 			  
 			  
@@ -1256,7 +1494,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 							  pb[j]=pc4[j];
 							}
 							
-							if (abs(KATT1[i]) == 4) {//xx-25-12-14
+							if (abs(KATT1[i]) == 4 || abs(KATT1[i]) == 5) {//??-1-12
 								collHQ23XX(KATT1[i], temp0, qhat0, vc0, pc01, pc2, pc3, pc4, qt, icl23, Tdiff, Ejp, maxFncHQ, lim_low, lim_int);
 							}
 							else { collHQ23(KATT1[i], temp0, qhat0, vc0, pc01, pc2, pc3, pc4, qt, icl23, Tdiff, Ejp, maxFncHQ, lim_low, lim_int); }
@@ -1293,6 +1531,33 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 
 							  KATT1[np0]=21;				  
 				  
+							  //??-1-12
+							  int parentColor = color[i];  // taken from final state of 22
+							  int parentAntiColor = anticolor[i];
+							  if (KATT1[i] == 21) { // g->gg process
+								  maxColor++;
+								  color[i] = parentColor;
+								  anticolor[i] = maxColor;
+								  color[np0] = maxColor;    // radiated gluon
+								  anticolor[np0] = parentAntiColor;
+							  }
+							  else if (KATT1[i] > 0) { // q->qg process
+								  maxColor++;
+								  color[i] = maxColor;
+								  anticolor[i] = 0;
+								  color[np0] = parentColor; // radiated gluon
+								  anticolor[np0] = maxColor;
+							  }
+							  else { // qbar->qbarg
+								  maxColor++;
+								  color[i] = 0;
+								  anticolor[i] = maxColor;
+								  color[np0] = maxColor;
+								  anticolor[np0] = parentAntiColor;
+							  }
+
+
+
 							  for(int j=0;j<=3;j++)
 								{
                                   //re-assignment
@@ -1391,7 +1656,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 								  for(int j=0;j<=3;j++) pc2[j]=pc4[j];
 //............test
 								
-								  if (abs(KATT1[i]) != 4) {
+								  if (abs(KATT1[i]) != 4 || abs(KATT1[i]) != 5) {//??-1-12
 									  //radiation(qhat0,vc0,pc01,pc2,pc4,pb,iclrad,tcar,tiscatter[i],tirad[i],dtlastrad,Elab,Ejp);	
 	////////////////////////////////////////////////////////////////////////////////////////////////////////////////////...new
 									  radiationHQ(KATT1[i], qhat0, vc0, pc2, pc01, pc4, pb, iclrad, Tdiff, Ejp, maxFncHQ, temp0, lim_low, lim_int);
@@ -1431,6 +1696,33 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 //                                cout << "add one gluon" << endl; //???
                                   ctGluon++;
 									
+								  //??-1-12
+								  int parentColor = color[i];  // taken from jet parton from the previous splitting
+								  int parentAntiColor = anticolor[i];
+								  if (KATT1[i] == 21) { // g->gg process
+									  maxColor++;
+									  color[i] = parentColor;
+									  anticolor[i] = maxColor;
+									  color[np0] = maxColor;    // radiated gluon
+									  anticolor[np0] = parentAntiColor;
+								  }
+								  else if (KATT1[i] > 0) { // q->qg process
+									  maxColor++;
+									  color[i] = maxColor;
+									  anticolor[i] = 0;
+									  color[np0] = parentColor; // radiated gluon
+									  anticolor[np0] = maxColor;
+								  }
+								  else { // qbar->qbarg
+									  maxColor++;
+									  color[i] = 0;
+									  anticolor[i] = maxColor;
+									  color[np0] = maxColor;
+									  anticolor[np0] = parentAntiColor;
+								  }
+
+
+
 								  for(int j=0;j<=3;j++)
 								  {
                                   //P[j][idlead1]=pc01[j];
@@ -1515,13 +1807,13 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 								  
 								  
 								  
-								  if (nrad > 2 && abs(KATT1[i]) != 4)    //xx-26-1-9
+								  if (nrad > 2 && (abs(KATT1[i]) == 4 || abs(KATT1[i]) == 5))    //??-1-12
 								  {
 									  nrad = nrad - 1;
 
 									  goto Doll33;
 								  }
-								  if(nrad>1 && abs(KATT1[i]) == 4)  //xx-26-1-9
+								  if(nrad>1 && (abs(KATT1[i]) == 4 || abs(KATT1[i]) == 5))  //??-1-12
 								  {
 									  nrad = nrad - 1;
 
@@ -1566,7 +1858,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
                       
         
                   //....tiscatter information
-                  if(abs(KATT1[i])==4) radng[i]=0.0; // do it below
+                  if(abs(KATT1[i])==4 || abs(KATT1[i]) == 5) radng[i]=0.0; // ??-1-12
                   tiscatter[i]=tcar;
                   V[0][i]=-log(1.0-ran0(&NUM1));
         
@@ -1773,7 +2065,7 @@ void LBTclass::LinearBoltzmannTransport(int &n, double &ti){
 			 
 //...........test			 
 			 
-			  if(P[0][idlead]>P[0][i] && abs(KATT1[i]) != 4)   //i<=nj
+			  if(P[0][idlead]>P[0][i] && (abs(KATT1[i]) != 4 || abs(KATT1[i]) != 5))   //??-1-12
                 {	
 
 	              KATTx=KATT1[i];
@@ -2057,6 +2349,11 @@ void LBTclass::lamXX(int KATT0, double& RTE, double& striRTE, double E, double T
 		RTE2 = (striRHQ[iT2][iE2] - striRHQ[iT1][iE2]) * (T - T1) / (T2 - T1) + striRHQ[iT1][iE2];
 		striRTE = (RTE2 - RTE1) * (E - E1) / (E2 - E1) + RTE1;
 	}
+	else if (KATT0 == 5 || KATT0 == -5) {//??-1-12
+		double RTE1 = (RHQb[iT2][iE1] - RHQb[iT1][iE1]) * (T - T1) / (T2 - T1) + RHQb[iT1][iE1];
+		double RTE2 = (RHQb[iT2][iE2] - RHQb[iT1][iE2]) * (T - T1) / (T2 - T1) + RHQb[iT1][iE2];
+		RTE = (RTE2 - RTE1) * (E - E1) / (E2 - E1) + RTE1;
+	}
 	else {
 		double RTE1 = (Rq[iT2][iE1] - Rq[iT1][iE1]) * (T - T1) / (T2 - T1) + Rq[iT1][iE1];
 		double RTE2 = (Rq[iT2][iE2] - Rq[iT1][iE2]) * (T - T1) / (T2 - T1) + Rq[iT1][iE2];
@@ -2319,7 +2616,7 @@ void LBTclass::flavorXX(int& CT, int& KATT0, int& KATT2, int& KATT3, double RTE,
 			KATT0 = 21;
 		}
 	}
-	else if (KATT00 == 4 || KATT00 == -4) { // for heavy quark
+	else if (KATT00 == 4 || KATT00 == -4) { 
 
 		double RTE1 = (striRHQ11[iT2][iE1] - striRHQ11[iT1][iE1]) * (T - T1) / (T2 - T1) + striRHQ11[iT1][iE1];
 		double RTE2 = (striRHQ11[iT2][iE2] - striRHQ11[iT1][iE2]) * (T - T1) / (T2 - T1) + striRHQ11[iT1][iE2];
@@ -2353,6 +2650,35 @@ void LBTclass::flavorXX(int& CT, int& KATT0, int& KATT2, int& KATT3, double RTE,
 			KATT2 = KATT3;
 		}
 
+	}
+	else if (KATT00 == 5 || KATT00 == -5) { //??-1-12
+	
+		double R0 = RTE;
+		double R1 = RTEHQ11;
+		double R2 = RTEHQ12;
+
+		double a = ran0(&NUM1);
+
+		//          qhat_over_T3=qhatTP;  // what is read in is qhat/T^3 of quark
+		//          D2piT=8.0*pi/qhat_over_T3;
+
+		if (a <= R1 / R0) { //Qq->Qq
+			CT = 11;
+			b = floor(ran0(&NUM1) * 6 + 1);
+			if (b == 7) {
+				b = 6;
+			}
+			KATT3 = vb[b];
+			KATT2 = KATT3;
+		}
+		else { //Qg->Qg
+			CT = 12;
+			KATT3 = 21;
+			KATT2 = KATT3;
+		}
+
+	
+	
 	}
 	else { //.....for quark and antiquark (light)
 		double R00 = RTE;
@@ -2512,6 +2838,18 @@ void LBTclass::linearXX(int KATT, double E, double T, double& T1, double& T2, do
 		//	  RTE1=(qhatHQ[iT2][iE1]-qhatHQ[iT1][iE1])*(T-T1)/(T2-T1)+qhatHQ[iT1][iE1];
 		//	  RTE2=(qhatHQ[iT2][iE2]-qhatHQ[iT1][iE2])*(T-T1)/(T2-T1)+qhatHQ[iT1][iE2];
 		//	  qhatTP=(RTE2-RTE1)*(E-E1)/(E2-E1)+RTE1;	
+
+
+	}
+
+	else if (KATT == 5 || KATT == -5) {  //??-1-12
+		double RTE1 = (RHQ11b[iT2][iE1] - RHQ11b[iT1][iE1]) * (T - T1) / (T2 - T1) + RHQ11b[iT1][iE1];
+		double RTE2 = (RHQ11b[iT2][iE2] - RHQ11b[iT1][iE2]) * (T - T1) / (T2 - T1) + RHQ11b[iT1][iE2];
+		RTEHQ11 = (RTE2 - RTE1) * (E - E1) / (E2 - E1) + RTE1;
+
+		RTE1 = (RHQ12b[iT2][iE1] - RHQ12b[iT1][iE1]) * (T - T1) / (T2 - T1) + RHQ12b[iT1][iE1];
+		RTE2 = (RHQ12b[iT2][iE2] - RHQ12b[iT1][iE2]) * (T - T1) / (T2 - T1) + RHQ12b[iT1][iE2];
+		RTEHQ12 = (RTE2 - RTE1) * (E - E1) / (E2 - E1) + RTE1;
 
 	}
 	else {
@@ -6275,7 +6613,285 @@ void LBTclass::collHQ22Qg(int CT, double temp, double qhat0ud, double v0[4], dou
 
 
 
+void LBTclass::collHQ22XXX(int CT, double temp, double qhat0ud, double v0[4], double p0[4], double p2[4], double p3[4], double p4[4], double& qt, int parID) {  //??-1-12
+	//
+	//    HQ 2->2 scatterings
+	//    p0 initial HQ momentum, output to final momentum
+	//    p2 final thermal momentum, p3 initial thermal energy
+	//
+	//    amss=sqrt(abs(p0(4)**2-p0(1)**2-p0(2)**2-p0(3)**2))
+	//
+	//************************************************************
 
+
+	// transform to local comoving frame of the fluid
+	trans(v0, p0);
+
+	//************************************************************
+
+	//    sample the medium parton thermal momentum in the comoving frame
+
+	double xw;
+	double razim;
+	double rcos;
+	double rsin;
+
+	double ss;
+
+	double rant;
+	double tt;
+
+	double uu;
+	double ff;
+	double rank;
+
+	double msq;
+
+	double e2, theta2, theta4, phi24;   // the four independent variables      
+	double e1, e4, p1, cosTheta24, downFactor, sigFactor; // other useful variables
+	double HQmass, fBmax, fFmax, fBmaxb, fFmaxb, maxValue;
+	int index_p1, index_T, index_e2;
+	int ct1_loop, ct2_loop, flag1, flag2;
+
+	double px1, py1, pz1, pp1[4];
+	double px2, py2, pz2, pp2[4];
+	double px3, py3, pz3, pp3[4], pp3mag;
+	double px4, py4, pz4, pp4[4];
+	double p1dotp3;
+	double qperp2;
+
+	flag1 = 0;
+	flag2 = 0;
+
+	// continue this function for HQ scattering
+
+	HQmass = p0[0] * p0[0] - p0[1] * p0[1] - p0[2] * p0[2] - p0[3] * p0[3];
+	if (HQmass > 1e-12) {
+		HQmass = sqrt(HQmass);
+	}
+	else {
+		HQmass = 0.0;
+	}
+
+	//    Initial 4-momentum of HQ
+	//
+	//************************************************************
+	p4[1] = p0[1];
+	p4[2] = p0[2];
+	p4[3] = p0[3];
+	p4[0] = p0[0];
+	//************************************************************	  
+
+	p1 = sqrt(p0[1] * p0[1] + p0[2] * p0[2] + p0[3] * p0[3]);
+	index_p1 = (int)((p1 - min_p1XXX) / bin_p1XXX);//??-1-12
+	index_T = (int)((temp - min_TXXX) / bin_TXXX);//??-1-12
+	if (index_p1 >= N_p1XXX) {//??-1-12
+		index_p1 = N_p1XXX - 1;
+		cout << "warning: p1 is over p_max: " << p1 << endl;
+	}
+	if (index_T >= N_TXXX) {//??-1-12
+		index_T = N_TXXX - 1;
+		cout << "warning: T is over T_max: " << temp << endl;
+	}
+	if (index_T < 0) {
+		index_T = 0;
+		cout << "warning: T is below T_min: " << temp << endl;
+	}
+
+	fBmax = distFncBM[index_T][index_p1];
+	fFmax = distFncFM[index_T][index_p1];
+
+	fBmaxb = distFncBMb[index_T][index_p1];
+	fFmaxb = distFncFMb[index_T][index_p1];  // maximum of f(xw) at given p1 and T
+
+	maxValue = 10.0;  // need actual value later
+
+	ct1_loop = 0;
+	do {   // sample p2 (light parton) using distribution integrated over 3 angles
+		ct1_loop++;
+		if (ct1_loop > 1e6) {
+			//            cout << "cannot sample light parton for HQ scattering ..." << endl;
+			flag1 = 1;
+			break;
+		}
+		xw = max_e2 * ran0(&NUM1);
+		index_e2 = (int)((xw - min_e2) / bin_e2);
+		if (index_e2 >= N_e2) index_e2 = N_e2 - 1;
+		if (CT == 11) { // qc->qc
+			//           ff=distFncF[index_T][index_p1][index_e2]/fFmax;
+			//           maxValue=distMaxF[index_T][index_p1][index_e2];
+	
+			if (fabs(parID) == 5) ff = distFncFb[index_T][index_p1][index_e2] / fFmaxb;
+	
+			if (fabs(parID) == 5)  maxValue = distMaxFb[index_T][index_p1][index_e2];
+		}
+		else if (CT == 12) { // gc->gc
+			//           ff=distFncB[index_T][index_p1][index_e2]/fBmax;
+			//           maxValue=distMaxB[index_T][index_p1][index_e2];
+		
+			if (fabs(parID) == 5)  ff = distFncBb[index_T][index_p1][index_e2] / fBmaxb;
+	
+			if (fabs(parID) == 5)   maxValue = distMaxBb[index_T][index_p1][index_e2];
+		}
+		else {
+			cout << "Wrong HQ channel ID" << endl;
+			exit(EXIT_FAILURE);
+		}
+	} while (ran0(&NUM1) > ff);
+
+	e2 = xw * temp;
+	e1 = p0[0];
+
+	// now e2 is fixed, need to sample the remaining 3 variables
+	ct2_loop = 0;
+	do {
+		ct2_loop++;
+		if (ct2_loop > 1e6) {
+			cout << "cannot sample final states for HQ scattering ..." << endl;
+			flag2 = 1;
+			break;
+		}
+
+		theta2 = pi * ran0(&NUM1);
+		theta4 = pi * ran0(&NUM1);
+		phi24 = 2.0 * pi * ran0(&NUM1);
+
+		cosTheta24 = sin(theta2) * sin(theta4) * cos(phi24) + cos(theta2) * cos(theta4);
+		downFactor = e1 - p1 * cos(theta4) + e2 - e2 * cosTheta24;
+		e4 = (e1 * e2 - p1 * e2 * cos(theta2)) / downFactor;
+		sigFactor = sin(theta2) * sin(theta4) * e2 * e4 / downFactor;
+
+		// calculate s,t,u, different definition from light quark -- tt, uu are negative
+		ss = 2.0 * e1 * e2 + HQmass * HQmass - 2.0 * p1 * e2 * cos(theta2);
+		tt = -2.0 * e2 * e4 * (1.0 - cosTheta24);
+		uu = 2.0 * HQmass * HQmass - ss - tt;
+
+		px1 = p0[1];
+		py1 = p0[2];
+		pz1 = p0[3];
+		pp1[1] = p0[1];
+		pp1[2] = p0[2];
+		pp1[3] = p0[3];
+		pp1[0] = p0[0];
+
+
+		px2 = e2 * sin(theta2);
+		py2 = 0.0;
+		pz2 = e2 * cos(theta2);
+		pp2[1] = e2 * sin(theta2);
+		pp2[2] = 0.0;
+		pp2[3] = e2 * cos(theta2);
+		pp2[0] = e2;
+
+		px4 = e4 * sin(theta4) * cos(phi24);
+		py4 = e4 * sin(theta4) * sin(phi24);
+		pz4 = e4 * cos(theta4);
+		pp4[1] = e4 * sin(theta4) * cos(phi24);
+		pp4[2] = e4 * sin(theta4) * sin(phi24);
+		pp4[3] = e4 * cos(theta4);
+		pp4[0] = e4;
+
+		rotate(p4[1], p4[2], p4[3], pp2, -1);
+		rotate(p4[1], p4[2], p4[3], pp4, -1);
+
+		px3 = pp1[1] + pp2[1] - pp4[1];
+		py3 = pp1[2] + pp2[2] - pp4[2];
+		pz3 = pp1[3] + pp2[3] - pp4[3];
+		pp3mag = sqrt(px3 * px3 + py3 * py3 + pz3 * pz3);
+		pp3[1] = pp1[1] + pp2[1] - pp4[1];
+		pp3[2] = pp1[2] + pp2[2] - pp4[2];
+		pp3[3] = pp1[3] + pp2[3] - pp4[3];
+		pp3[0] = pp1[0] + pp2[0] - pp4[0];
+
+		////	  rotate(p4[1],p4[2],p4[3],pp3,1);
+		////	  qperp2=pow(pp3[1],2)+pow(pp3[2],2);
+
+		p1dotp3 = px1 * px3 + py1 * py3 + pz1 * pz3;
+		qperp2 = pp3mag * pp3mag - (p1dotp3 / p1) * (p1dotp3 / p1);
+
+		// re-sample if the kinematic cuts are not satisfied
+		if (ss <= 2.0 * qhat0ud || tt >= -qhat0ud || uu >= -qhat0ud || (qperp2 >= (10.0 * temp) * (10.0 * temp))) {
+			////          if(ss<=2.0*qhat0ud || tt>=-qhat0ud || uu>=-qhat0ud) {
+			rank = ran0(&NUM1);
+			sigFactor = 0.0;
+			msq = 0.0;
+			continue;
+		}
+
+		if (CT == 11) {  // qc->qc
+			ff = (1.0 / (exp(e2 / temp) + 1.0)) * (1.0 - 1.0 / (exp(e4 / temp) + 1.0));
+			sigFactor = sigFactor * ff;
+			msq = Mqc2qc(ss, tt, HQmass) / maxValue;
+		}
+
+		if (CT == 12) {  // gc->gc
+			ff = (1.0 / (exp(e2 / temp) - 1.0)) * (1.0 + 1.0 / (exp(e4 / temp) - 1.0));
+			sigFactor = sigFactor * ff;
+			msq = Mgc2gc(ss, tt, HQmass) / maxValue;
+		}
+
+		rank = ran0(&NUM1);
+
+	} while (rank > (msq * sigFactor));
+
+	if (flag1 == 0 && flag2 == 0) {
+
+		// pass p2 value to p3 for initial thermal parton
+		p3[1] = e2 * sin(theta2);
+		p3[2] = 0.0;
+		p3[3] = e2 * cos(theta2);
+		p3[0] = e2;
+
+		// calculate momenta of outgoing particles
+		// here p2 is for p4 (light parton) in my note
+
+		p2[1] = e4 * sin(theta4) * cos(phi24);
+		p2[2] = e4 * sin(theta4) * sin(phi24);
+		p2[3] = e4 * cos(theta4);
+		p2[0] = e4;
+
+		// Because we treated p0 (p1 in my note for heavy quark) as the z-direction, proper rotations are necessary here
+		rotate(p4[1], p4[2], p4[3], p2, -1);
+		rotate(p4[1], p4[2], p4[3], p3, -1);
+
+		p0[1] = p4[1] + p3[1] - p2[1];
+		p0[2] = p4[2] + p3[2] - p2[2];
+		p0[3] = p4[3] + p3[3] - p2[3];
+		p0[0] = sqrt(p0[1] * p0[1] + p0[2] * p0[2] + p0[3] * p0[3] + HQmass * HQmass);
+
+		// Debug
+		if (fabs(p0[0] + p2[0] - p3[0] - p4[0]) > 0.00001) {
+			cout << "Violation of energy conservation in HQ 2->2 scattering:  " << fabs(p0[0] + p2[0] - p3[0] - p4[0]) << endl;
+		}
+
+		// calculate qt in the rest frame of medium
+		rotate(p4[1], p4[2], p4[3], p0, 1);
+		qt = sqrt(pow(p0[1], 2) + pow(p0[2], 2));
+		rotate(p4[1], p4[2], p4[3], p0, -1);
+
+		// transform from comoving frame to the lab frame
+		transback(v0, p2);
+		transback(v0, p0);
+		transback(v0, p3);
+		transback(v0, p4);
+
+	}
+	else { // no scattering
+		transback(v0, p0);
+		transback(v0, p4);
+		qt = 0;
+		p2[0] = 0;
+		p2[1] = 0;
+		p2[2] = 0;
+		p2[3] = 0;
+		p3[0] = 0;
+		p3[1] = 0;
+		p3[2] = 0;
+		p3[3] = 0;
+	}
+
+
+}
 
 
   double LBTclass::Mqc2qc(double s, double t, double M) {
@@ -6566,7 +7182,7 @@ void LBTclass::collHQ23XX(int parID, double temp_med, double qhat0ud, double v0[
 	double zDirection[4];
 	double HQmass = sqrt(p0[0] * p0[0] - p0[1] * p0[1] - p0[2] * p0[2] - p0[3] * p0[3]);
 
-	if (abs(parID) != 4) {
+	if ((abs(parID) != 4) && (abs(parID) != 5)) {//??-1-12
 		HQmass = 0.0;
 		p0[0] = sqrt(p0[1] * p0[1] + p0[2] * p0[2] + p0[3] * p0[3] + HQmass * HQmass);
 	}
@@ -6982,31 +7598,37 @@ double LBTclass::nHQgluonXX(int parID, double dtLRF, double& time_gluon, double&
 		cout << "temperature exceeds temp_max -- extrapolation is used" << endl;
 		cout << time_gluon << "    " << temp_med << "    " << HQenergy << endl;
 		//     temp_med=temp_max;
-	}//xx-12-7   ÕâÀïÊµ¼ÊÉÏÓ¦¸ÃÐÞ¸Ä£¬ÒòÎªtempmaxÓÐÁ½¸ö£¬µ«ÊÇ²»Ó°Ïì¼ÆËã
+	}//xx-12-7   ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Þ¸Ä£ï¿½ï¿½ï¿½Îªtempmaxï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	if (HQenergy > HQener_max) {
 		cout << "HQenergy exceeds HQener_max -- extrapolation is used" << endl;
 		cout << time_gluon << "    " << temp_med << "    " << HQenergy << endl;
 		//     HQenergy=HQener_max;
-	}//xx-12-7 Í¬ÉÏ
+	}//xx-12-7 Í¬ï¿½ï¿½
 
 	if (temp_med < temp_min) {
 		cout << "temperature drops below temp_min" << endl;
 		cout << time_gluon << "    " << temp_med << "    " << HQenergy << endl;
 		temp_med = temp_min;
-	}//xx-12-7 Í¬ÉÏ
+	}//xx-12-7 Í¬ï¿½ï¿½
 
-	time_num = (int)(time_gluon / delta_tg + 0.5) + 1;   //xx-12-7 ÍêÈ«Ò»ÖÂ
+	time_num = (int)(time_gluon / delta_tg + 0.5) + 1;   //xx-12-7 ï¿½ï¿½È«Ò»ï¿½ï¿½
 	cout << "time_gluon:" << time_gluon << "  " << "delta_tg:" << delta_tg << "  " << "time_num:" << time_num << endl;
 	//  temp_num=(int)((temp_med-temp_min)/delta_temp+0.5);
 	//  HQenergy_num=(int)(HQenergy/delta_HQener+0.5); // use linear interpolation instead of finding nearest point for E and T dimensions
-	//Õâ¸öº¯ÊýÖ»ÓÐHF»áÊ¹ÓÃ£¬ËùÒÔ²ÎÊý²»Í¬Ê±Ö±½ÓÊ¹ÓÃHF×¨ÓÃ±äÁ¿¼´¿É
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½HFï¿½ï¿½Ê¹ï¿½Ã£ï¿½ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½ï¿½Í¬Ê±Ö±ï¿½ï¿½Ê¹ï¿½ï¿½HF×¨ï¿½Ã±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	temp_num = (int)((temp_med - temp_min) / delta_tempXX);
 	cout << "temp_med:" << temp_med << "  " << "temp_min:" << temp_min << "  " << "delta_tempXX:" << delta_tempXX << "  " << "temp_num:" << temp_num << endl;
-	HQenergy_num = (int)(HQenergy / delta_HQenerXX); // normal interpolation
-	cout << "HQenergy:" << HQenergy << "  " << "delta_HQenerXX:" << delta_HQenerXX << "  " << " HQenergy_num:" << HQenergy_num << endl;
-	if (HQenergy_num >= HQener_gnXX) HQenergy_num = HQener_gnXX - 1; // automatically become extrapolation
-	if (temp_num >= temp_gn) temp_num = temp_gn - 1;//25-12-7 »¹ÓÐÒ»¸ötemp_gnXX£¬²»¹ýÊýÖµÏàÍ¬£¬ÓÃÄÄ¸ö¶¼Ò»Ñù
+	if (abs(parID) == 5) {  //??-1-12
+		HQenergy_num = (int)(HQenergy / delta_HQenerXXX); 
+		if (HQenergy_num >= HQener_gnXXX) HQenergy_num = HQener_gnXXX - 1;
+	}
+	else {
+		HQenergy_num = (int)(HQenergy / delta_HQenerXX); 
+		if (HQenergy_num >= HQener_gnXX) HQenergy_num = HQener_gnXX - 1;
+	}// normal interpolation
+	
+	if (temp_num >= temp_gn) temp_num = temp_gn - 1;//25-12-7 ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½temp_gnXXï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½ï¿½ï¿½Ò»ï¿½ï¿½
 
 	if (parID == 21) {
 		rate_T1E1 = dNg_over_dt_g[time_num][temp_num][HQenergy_num];
@@ -7029,6 +7651,16 @@ double LBTclass::nHQgluonXX(int parID, double dtLRF, double& time_gluon, double&
 		max_T2E2 = max_dNgfnc_cXX[time_num][temp_num + 1][HQenergy_num + 1];
 		cout << "input:" << rate_T1E1 << "  " << rate_T1E2 << "  " << rate_T2E1 << "  " << rate_T2E2 << "  " << max_T1E1 << "  " << max_T1E2 << "  " << max_T2E1 << "  " << max_T2E2 << "  " << endl;
 	}
+	else if (abs(parID) == 5) {//??-1-12
+		rate_T1E1 = dNg_over_dt_b[time_num][temp_num][HQenergy_num];
+		rate_T1E2 = dNg_over_dt_b[time_num][temp_num][HQenergy_num + 1];
+		rate_T2E1 = dNg_over_dt_b[time_num][temp_num + 1][HQenergy_num];
+		rate_T2E2 = dNg_over_dt_b[time_num][temp_num + 1][HQenergy_num + 1];
+		max_T1E1 = max_dNgfnc_b[time_num][temp_num][HQenergy_num];
+		max_T1E2 = max_dNgfnc_b[time_num][temp_num][HQenergy_num + 1];
+		max_T2E1 = max_dNgfnc_b[time_num][temp_num + 1][HQenergy_num];
+		max_T2E2 = max_dNgfnc_b[time_num][temp_num + 1][HQenergy_num + 1];
+	}
 	else {
 		rate_T1E1 = dNg_over_dt_q[time_num][temp_num][HQenergy_num];
 		rate_T1E2 = dNg_over_dt_q[time_num][temp_num][HQenergy_num + 1];
@@ -7045,8 +7677,14 @@ double LBTclass::nHQgluonXX(int parID, double dtLRF, double& time_gluon, double&
 	max_EGrid_low = max_T1E1 + (temp_med - temp_min - temp_num * delta_tempXX) / delta_tempXX * (max_T2E1 - max_T1E1);
 	max_EGrid_high = max_T1E2 + (temp_med - temp_min - temp_num * delta_tempXX) / delta_tempXX * (max_T2E2 - max_T1E2);
 	cout << "rate_EGrid_low:" << rate_EGrid_low << "  " << "rate_EGrid_high:" << rate_EGrid_high << "  " << "max_EGrid_low:" << max_EGrid_low << "  " << "max_EGrid_high :" << max_EGrid_high << "  " << endl;
-	delta_Ng = rate_EGrid_low + (HQenergy - HQenergy_num * delta_HQenerXX) / delta_HQenerXX * (rate_EGrid_high - rate_EGrid_low);
-	max_Ng = max_EGrid_low + (HQenergy - HQenergy_num * delta_HQenerXX) / delta_HQenerXX * (max_EGrid_high - max_EGrid_low);
+	if (abs(parID) == 4) {  
+		delta_Ng = rate_EGrid_low + (HQenergy - HQenergy_num * delta_HQenerXX) / delta_HQenerXX * (rate_EGrid_high - rate_EGrid_low);
+		max_Ng = max_EGrid_low + (HQenergy - HQenergy_num * delta_HQenerXX) / delta_HQenerXX * (max_EGrid_high - max_EGrid_low);
+	}
+	else {//xx-1-12
+		delta_Ng = rate_EGrid_low + (HQenergy - HQenergy_num * delta_HQenerXXX) / delta_HQenerXXX * (rate_EGrid_high - rate_EGrid_low);
+		max_Ng = max_EGrid_low + (HQenergy - HQenergy_num * delta_HQenerXXX) / delta_HQenerXXX * (max_EGrid_high - max_EGrid_low);
+	}
 	cout << " delta_Ng_1:" << delta_Ng << endl;
 	delta_Ng = delta_Ng * 6.0 / D2piT * dtLRF;
 	cout << " delta_Ng_2:" << delta_Ng << endl;
@@ -7460,7 +8098,7 @@ delta_temp = (temp_max - temp_min) / temp_gn;
 delta_tempXX = (temp_maxXX - temp_min) / temp_gn;
 delta_HQener = HQener_max / HQener_gn;
 delta_HQenerXX = HQener_maxXX / HQener_gnXX;
-
+delta_HQenerXXX = HQener_maxXXX / HQener_gnXXX;  //??-1-12
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////...HQupdate
 
 
@@ -8470,6 +9108,100 @@ loopN=1000;
 	 cout << distMaxFXX[3][1][3] << endl;
 	 cout << distMaxFXX[7][4][4] << endl;
 	 cout << distMaxFXX[5][5][7] << endl;
+
+
+
+
+
+	 //??-1-12   for b quarks
+
+
+
+
+	 int itb, ieb;
+	 int bbb = 500;
+	 char bratedata[1024];
+	 sprintf(bratedata, "%s/b/ratedata-HQ", rate_route);
+	 ifstream b1(bratedata);
+	 if (!b1.is_open())
+	 {
+		 cout << "Erro openning HQ data file!\n";
+	 }
+	 else
+	 {
+		 for (int i = 1; i <=bbb; i++)
+		 {
+			 b1 >> itb >> ieb;
+			 b1 >> RHQb[itb][ieb] >> RHQ11b[itb][ieb] >> RHQ12b[itb][ieb] >> qhatHQb[itb][ieb];
+		 }
+	 }
+	 b1.close();
+
+
+	 char bdng[1024];
+	 sprintf(bdng, "%s/b/dNg_over_dt_bD6.dat", rate_route);
+	 ifstream b2(bdng);
+	 if (!b2.is_open())
+	 {
+		 cout << "Erro openning HQ data file!\n";
+	 }
+	 else {
+		 int useless1, useless2, useless3, useless4;
+		 for (int k = 1; k <= t_gn; k++) {
+			 b2 >> useless1 >> useless2 >> useless3 >> useless4;
+			 for (int i = 1; i <= 100; i++) {
+				 dNg_over_dt_b[k + 1][i][0] = 0.0;
+				 max_dNgfnc_b[k + 1][i][0] = 0.0;
+				 for (int j = 1; j <= 1000; j++) {
+					 b2 >> dNg_over_dt_b[k + 1][i][j] >> max_dNgfnc_b[k + 1][i][j];
+				 }
+			 }
+		 }
+	 }
+	 b2.close();
+
+	 char bdistB[1024];
+	 sprintf(bdistB, "%s/b/distB.dat", rate_route);
+	 ifstream b3(bdistB);
+	 if (!b3.is_open()) {
+		 cout << "Erro openning data file distB.dat!" << endl;
+	 }
+	 else {
+		 for (int i = 0; i < 60; i++) {
+			 for (int j = 0; j < 1000; j++) {
+				 double dummy_Tb, dummy_p1b;
+				 b3 >> dummy_Tb >> dummy_p1b;
+				 b3 >> distFncBMb[i][j];
+				 for (int k = 0; k < 75; k++) b3 >> distFncBb[i][j][k];
+				 for (int k = 0; k < 75; k++) b3 >> distMaxBb[i][j][k];
+			 }
+		 }
+	 }
+	 b3.close();
+
+
+	 char bdistF[1024];
+	 sprintf(bdistF, "%s/b/distF.dat", rate_route);
+		 ifstream b4(bdistF);
+	 if (!b4.is_open()) {
+		 cout << "Erro openning data file distB.dat!" << endl;
+	 }
+	 else {
+		 for (int i = 0; i < 60; i++) {
+			 for (int j = 0; j < 1000; j++) {
+				 double dummy_Tf, dummy_p1f;
+				 b4 >> dummy_Tf >> dummy_p1f;
+				 b4 >> distFncFMb[i][j];
+				 for (int k = 0; k < 75; k++) b4 >> distFncFb[i][j][k];
+				 for (int k = 0; k < 75; k++) b4 >> distMaxFb[i][j][k];
+			 }
+		 }
+	 }
+	 b4.close();
+
+
+
+
 
 
 

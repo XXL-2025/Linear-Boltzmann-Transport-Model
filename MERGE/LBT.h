@@ -67,8 +67,8 @@ const int N_p1XX = 500;
 const int N_TXX = 60;
 //xx
 
-
-
+const int N_p1XXX= 1000; //??-1-12
+const int N_TXXX = 60; //??-1-12
 
 
 
@@ -88,7 +88,6 @@ const double    KPsig=5.0;
 const double    KTamp=2.0;
 const double    KTsig=0.05*hydro_Tc;
 const double    preKT=1.0;
-
 
 
 
@@ -562,15 +561,45 @@ void bulklinearXX(double tau, double x, double y, double eta, double& temp, doub
 
 
 
+//??-1-11
+static const int dimParList = 2000000;
+int color[dimParList] = { 0 };
+int anticolor[dimParList] = { 0 };
+int color0[dimParList] = { 0 };
+int anticolor0[dimParList] = { 0 };
+int fake[dimParList] = { 0 };
+int fake0[dimParList] = { 0 };
+
+//??-1-12
+int maxColor ;
+double RHQb[60][20];        
+double RHQ11b[60][20]; 
+double RHQ12b[60][20];   
+double qhatHQb[60][20];
+double dNg_over_dt_b[75 + 2][100 + 1][1000 + 1] = { 0.0 };
+double max_dNgfnc_b[75 + 2][100 + 1][1000 + 1] = { 0.0 };
+double distFncBMb[60][1000], distFncFMb[60][1000];
+double distFncBb[60][1000][75],distFncFb[60][1000][75],distMaxBb[60][1000][75],distMaxFb[60][1000][75];
+double KPampb = 5.0;
+double KPsigb = 5.0;
+double KTampb = 0.0;
+double KTsigb = 0.05;
+const double HQener_maxXXX = 2000.0;
+static const int HQener_gnXXX = 1000;
+double delta_HQenerXXX;
+double min_p1XXX = 0.0;
+double max_p1XXX = 2000.0;
+double bin_p1XXX = (max_p1XXX - min_p1XXX) / N_p1XXX;
+double min_TXXX = 0.1;
+double max_TXXX = 0.7;
+double bin_TXXX = (max_TXXX - min_TXXX) / N_TXXX;
+void collHQ22XXX(int CT, double temp, double qhat, double v0[4], double p0[4], double p2[4], double p3[4], double p4[4], double& qt, int parID);
 
 
 
 
 
 
-
-
-	  
 //...functions	  
 
 void LinearBoltzmannTransport(int &n, double &ti);

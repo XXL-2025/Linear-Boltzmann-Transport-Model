@@ -20,7 +20,7 @@ alphas   //strong coupling constant setting
 ncall   nprint   NUM1  //...regular MC control
 1    1        -33
 time0     timend     dt  //dt means dtau if tauswitch is on
-0.6       10.0       0.3
+0.6       3.0       0.3
 switchsingle  //switch for the single parton test
 1
 ener     mass     Kjet     px0     py0     pz0     en0     Xinitial    Yinitial     Zinitial  //only work if(switchsingle==1) //single parton setting
@@ -38,7 +38,7 @@ dxh      dyh      detah      dtauh   //...Hydroprofile setting
 x0h      y0h      eta0h      tau0h   //...Hydroprofile setting
 -10.8    -10.8    -4.8       0.6 	 
 rate_path
-/home/hyj/lxx/LBT_MERGE_version2/input
+/home/hyj/lxx/LBT_MERGE_version3/input
 hydro_path
-/home/hyj/lxx/LBT_MERGE_version2/input/Hydroprofile_5020_010_visc
+/home/hyj/lxx/LBT_MERGE_version3/input/Hydroprofile_5020_010_visc
 

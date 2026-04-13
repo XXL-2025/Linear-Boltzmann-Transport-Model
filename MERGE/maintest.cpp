@@ -286,7 +286,7 @@ int main(int argc, char **argv) {
 
       int nj = 0;
 
-      double pxjetshower, pyjetshower, pzjetshower, p0jetshower, vxjetshower, vyjetshower, vzjetshower, vtjetshower, etajetshower, ptjetshower;
+      double pxjetshower, pyjetshower, pzjetshower, p0jetshower, vxjetshower, vyjetshower, vzjetshower, vtjetshower, etajetshower, ptjetshower,jetcolor,jetanticolor; //??-1-11
 
 
       if (LBT->switchsingle == 0) {  //..............0122
@@ -304,9 +304,9 @@ int main(int argc, char **argv) {
               //f4 >> ne >> fjetshower >> pxjetshower >> pyjetshower >> pzjetshower >> pythiap0 >> vxjetshower >> vyjetshower >> vzjetshower >> vtjetshower >> Aleading >> timeplus >> timeplus_0 >> timeplus_0_1;			
 
              // f4 >> ne >> fjetshower >> pxjetshower >> pyjetshower >> pzjetshower >> pythiap0 >> Aleading >> vxjetshower >> vyjetshower >> vzjetshower >> vtjetshower;	
-              f4 >> ne >> fjetshower >> weight >> pxjetshower >> pyjetshower >> pzjetshower >> pythiap0 >> Aleading >> vxjetshower >> vyjetshower >> vzjetshower >> vtjetshower;
+              f4 >> ne >> fjetshower >> weight >> pxjetshower >> pyjetshower >> pzjetshower >> pythiap0 >> Aleading >> vxjetshower >> vyjetshower >> vzjetshower >> vtjetshower>> jetcolor>> jetanticolor;//??-1-11
 
-              if (abs(fjetshower) == 4) { p0jetshower = pythiap0; }
+              if (abs(fjetshower) == 4 || abs(fjetshower) == 5) { p0jetshower = pythiap0; } //??-1-11
               else { //xx-25-12-14
 
                   p0jetshower = sqrt(pow(pxjetshower, 2) + pow(pyjetshower, 2) + pow(pzjetshower, 2));
@@ -322,7 +322,7 @@ int main(int argc, char **argv) {
 
               //if(abs(Aleading) == 23) continue;
 
-              if (abs(fjetshower) != 21 && abs(fjetshower) != 1 && abs(fjetshower) != 2 && abs(fjetshower) != 3 && abs(fjetshower) != 4) continue;   //xx-25-12-14
+              if (abs(fjetshower) != 21 && abs(fjetshower) != 1 && abs(fjetshower) != 2 && abs(fjetshower) != 3 && abs(fjetshower) != 4 && abs(fjetshower) != 5) continue;   //??-1-11
 
 
               //.................................................................................803			
@@ -374,6 +374,10 @@ int main(int argc, char **argv) {
               LBT->P[2][nj] = pyjetshower;
               LBT->P[3][nj] = pzjetshower;
               LBT->P[0][nj] = p0jetshower;
+              LBT->color[nj] = jetcolor; //??-1-11
+              LBT->anticolor[nj] = jetanticolor;//??-1-11
+              if (abs(LBT->color[nj]) > LBT->maxColor) LBT->maxColor = abs(LBT->color[nj]);//??-1-12
+              if (abs(LBT->anticolor[nj] > LBT->maxColor)) LBT->maxColor = abs(LBT->anticolor[nj]);//??-1-12
 
               if (ptjetshower > leading_pT)
               {
@@ -452,19 +456,22 @@ int main(int argc, char **argv) {
       if (LBT->switchsingle == 1) {  //..............0122
 
           LBT->nj = 1;
-          LBT->KATT1[1] = 21;
+          LBT->KATT1[1] = 5;
           LBT->P[1][1] = 0;
           LBT->P[3][1] = 0;
           LBT->P[0][1] = 100;
-          LBT->P[2][1] = 100;
+        //  LBT->P[2][1] = 100;
 //LBT->P[2][1]=sqrt(LBT->P[0][1]*LBT->P[0][1] - 1.27 * 1.27);
+LBT->P[2][1] = 99.91218;
 LBT->V[0][1] = 0.6;
 LBT->V[1][1] = 0;
 LBT->V[2][1] = 0;
 LBT->V[3][1] = 0;
+LBT->color[1] = 0;//??-1-11
+LBT->anticolor[1] = 110;//??-1-11
 
-
-
+if (abs(LBT->color[1]) > LBT->maxColor) LBT->maxColor = abs(LBT->color[1]);//??-1-12
+if (abs(LBT->anticolor[1] > LBT->maxColor)) LBT->maxColor = abs(LBT->anticolor[1]);//??-1-12
 
 
       }
@@ -512,10 +519,13 @@ LBT->V[3][1] = 0;
       // xx-25-12-17
       for (int i = 1; i <= LBT->np; i++) {
           if (LBT->P[0][i] == 0) continue;
-          // ¼ÆËãÖÊÁ¿
+          // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
           double mass = 0.0;
           if (abs(LBT->KATT1[i]) == 4) {
-              mass = 1.27; // c¿ä¿ËÖÊÁ¿
+              mass = 1.27; // cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+          }
+          else if (abs(LBT->KATT1[i]) == 5) { //??-1-12
+              mass = 4.19; 
           }
           else {
               mass = sqrt(LBT->P[0][i] * LBT->P[0][i] - LBT->P[1][i] * LBT->P[1][i] -
@@ -542,10 +552,13 @@ LBT->V[3][1] = 0;
 
         for (int i = 1; i <= LBT->np; i++) {  //xx-25-12-17
             if (LBT->P[0][i] == 0) continue;
-            // ¼ÆËãÖÊÁ¿
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             double mass = 0.0;
             if (abs(LBT->KATT1[i]) == 4) {
-                mass = 1.27; // c¿ä¿ËÖÊÁ¿
+                mass = 1.27; // cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            }
+            else if (abs(LBT->KATT1[i]) == 5) { //??-1-12
+                mass = 4.19;
             }
             else {
                 mass = sqrt(LBT->P[0][i] * LBT->P[0][i] - LBT->P[1][i] * LBT->P[1][i] -
