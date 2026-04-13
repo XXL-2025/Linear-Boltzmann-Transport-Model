@@ -1,0 +1,2809 @@
+
+############################################################
+Parameters for this run
+flag:initHardFlag: 2
+flag:flagJetX: 0
+flag:fixMomentum: 1
+flag:fixPosition: 1
+flag:vacORmed: 1
+flag:bulkType: 2
+flag:Kprimary: 1
+flag:KINT0: 1
+flag:outFormat: 1
+flag:heavyOut: 1
+flag:lightOut: 1
+para:nEvent: 1
+para:nParton: 1
+para:parID: 4
+para:tau0: 0.6
+para:tauend: 3
+para:dtau: 0.3
+para:temperature: 0.25
+para:alpha_s: 0.3
+para:hydro_Tc: 0.165
+para:pT_min: 0
+para:pT_max: 300
+para:eta_cut: 0.5
+para:ener: 100
+para:mass: 1.27
+para:KPamp: 2
+para:KPsig: 5
+para:KTamp: 2
+para:KTsig: 0.00825
+flag:flagPNP: 2
+para:scaleSigma: 4
+############################################################
+
+Parameter check passed
+/home/hyj/lxx/LBT_MERGE/input/Hydroprofile_5020_010_visc/bulk3D.dat
+ntauhydro 42 nxhydro 73 nyhydro 73 netahydro 33
+126.5    414400
+126.9    414200
+572.8    6.01e+08
+distB
+283.751
+466.508
+594.561
+8.7485
+75.5249
+126.796
+stri-distB
+139105
+125812
+67106.8
+27221.7
+54920
+54834.4
+108696
+distF
+29.7957
+66.394
+101.263
+1.03803
+14.1439
+34.6063
+stri-distF
+9802.2
+12331.5
+8214.24
+1981.56
+8585.92
+14782.3
+5989.76
+the program starts at:
+Current Time: 2025-12-15 19:20:01
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+=============
+ti:1.2
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.599952  0
+bulklinear:
+1.2  0  0.599952  0  0.400576  0.00101638  -0.000148979  0  0
+bulklinear_end:
+E:100.015 T:0.400576
+KPamp:2  PLen:100.007  KPsig:5
+KTamp:2  temp0:0.400576  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.612196
+qhat:0.156412
+ID:4  Tint_lrf[i]:0.599941  dt_lrf:0.300045
+time_gluon:0.599941  delta_tg:0.2  time_num:4
+temp_med:0.400576  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:100.015  delta_HQener:2   HQenergy_num:50
+input:1.285  1.286  1.325  1.327  157.8  160.8  160.7  164.1  
+rate_EGrid_low:1.28961  rate_EGrid_high:1.29072  max_EGrid_low:158.134  max_EGrid_high :161.18  
+ delta_Ng_1:1.28961
+ delta_Ng_2:0.224788
+KTfactor:1  runKT:0.612196
+radng[i]:0.137614
+probCol:0.175002  probRad:0.128565
+totprob:0.303567
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.147183  100.007  0.400576  0.4  0.42  54.5982  148.413  15  16  6  7
+flavor_end
+p1:100.007  temp:0.400576
+min_p1:0  bin_p1:2
+index_p1:50  index_T:30
+ct1_loop:16
+max_e2:15  xw:0.818372  temp:0.400576
+ct2_loop:1
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.400576  0.907385  0  97.0083  3.3196  0.327857  100  1.65768
+2-2_end
+KINT:1
+pc4:100  0  99.9919  0
+Elab:100
+vc0:0  0.00101638  -0.000148979  0
+pc4:100.015  -0.101646  100.007  0
+Ejp:100.015  qhat0:0.907385
+prob23:0.423514
+=============
+ti:1.5
+np:1
+momentum97.0083  0.849026  96.9858  1.42375
+mass:1.27
+position:0.00262563  0.899882  0.00440298
+bulklinear:
+1.49999  0.00262563  0.899882  0.00293533  0.373963  0.000627904  -7.11079e-05  2.01189e-07  0
+bulklinear_end:
+E:97.0093 T:0.373963
+KPamp:2  PLen:97.001  KPsig:5
+KTamp:2  temp0:0.373963  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.620294
+qhat:0.12888
+ID:4  Tint_lrf[i]:0.899945  dt_lrf:0.300003
+time_gluon:0.899945  delta_tg:0.2  time_num:5
+temp_med:0.373963  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:97.0093  delta_HQener:2   HQenergy_num:48
+input:1.618  1.62  1.67  1.671  209.6  214  213.8  218.3  
+rate_EGrid_low:1.65921  rate_EGrid_high:1.66042  max_EGrid_low:212.929  max_EGrid_high :217.408  
+ delta_Ng_1:1.65982
+ delta_Ng_2:0.292953
+KTfactor:1  runKT:0.620294
+radng[i]:0.181717
+probCol:0.166746  probRad:0.166163
+totprob:0.332909
+=============
+ti:1.8
+np:1
+momentum97.0083  0.849026  96.9858  1.42375
+mass:1.27
+position:0.00525126  1.19981  0.00880596
+bulklinear:
+1.79998  0.00525126  1.19981  0.00489224  0.352666  -0.00111744  0.00282798  7.18506e-07  0
+bulklinear_end:
+E:96.7266 T:0.352666
+KPamp:2  PLen:96.7183  KPsig:5
+KTamp:2  temp0:0.352666  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.625425
+qhat:0.109004
+ID:4  Tint_lrf[i]:1.19907  dt_lrf:0.299129
+time_gluon:1.19907  delta_tg:0.2  time_num:7
+temp_med:0.352666  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:96.7266  delta_HQener:2   HQenergy_num:48
+input:2.402  2.405  2.477  2.48  354.2  361.7  361.9  369.5  
+rate_EGrid_low:2.44199  rate_EGrid_high:2.44499  max_EGrid_low:358.305  max_EGrid_high :365.859  
+ delta_Ng_1:2.44308
+ delta_Ng_2:0.433571
+KTfactor:1  runKT:0.625425
+radng[i]:0.271166
+probCol:0.149999  probRad:0.23751
+totprob:0.387509
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.144265  96.7183  0.352666  0.34  0.36  54.5982  148.413  12  13  6  7
+flavor_end
+p1:96.7183  temp:0.352666
+min_p1:0  bin_p1:2
+index_p1:48  index_T:25
+ct1_loop:37
+max_e2:15  xw:2.17964  temp:0.352666
+ct2_loop:21
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.352666  0.703314  0  97.0129  0.75798  0.762609  97.0083  0.507514
+2-2_end
+KINT:1
+pc4:97.0083  0.849026  96.9858  1.42375
+Elab:97.0083
+vc0:0  -0.00111739  0.00282787  0.00880645
+pc4:96.7266  0.957268  96.7118  0.570674
+Ejp:96.7266  qhat0:0.703314
+prob23:0.612915
+2-3
+4  0.352666  0.703314  -0.00111739  0.00282787  0.00880645  
+95.3608  1.71701  95.3281  1.28768  
+1.11154  0.0964214  0.491054  -0.992518  
+0.762609  -0.00655098  -0.573239  -0.502918  
+1.29856  -0.970955  0.593339  0.625671  
+0.507514  0  1.19907  96.7266  
+214.206  0.00867019  0.99133
+2-3_end
+nrad1
+test1
+test2
+=============
+ti:2.1
+np:1
+momentum95.3608  1.71701  95.3281  1.28768
+mass:1.27
+position:0.0106529  1.49971  0.0128569
+bulklinear:
+2.09996  0.0106529  1.49971  0.00612242  0.334337  -0.00292814  0.0105988  1.52846e-06  0
+bulklinear_end:
+E:94.3525 T:0.334337
+KPamp:2  PLen:94.3439  KPsig:5
+KTamp:2  temp0:0.334337  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.632069
+qhat:0.0939232
+ID:4  Tint_lrf[i]:0.296828  dt_lrf:0.296828
+time_gluon:0.296828  delta_tg:0.2  time_num:2
+temp_med:0.334337  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:94.3525  delta_HQener:2   HQenergy_num:47
+input:0.1023  0.1024  0.1069  0.107  13.23  13.51  13.64  13.95  
+rate_EGrid_low:0.10629  rate_EGrid_high:0.10639  max_EGrid_low:13.5856  max_EGrid_high :13.8917  
+ delta_Ng_1:0.106308
+ delta_Ng_2:0.0189322
+KTfactor:1  runKT:0.632069
+radng[i]:0.0119664
+probCol:0.193654  probRad:0.0118951
+totprob:0.205549
+=============
+ti:2.4
+np:1
+momentum95.3608  1.71701  95.3281  1.28768
+mass:1.27
+position:0.0160545  1.79961  0.0169079
+bulklinear:
+2.39994  0.0160545  1.79961  0.00704508  0.317835  -0.00407825  0.0243169  2.61575e-06  0
+bulklinear_end:
+E:93.0698 T:0.317835
+KPamp:2  PLen:93.0612  KPsig:5
+KTamp:2  temp0:0.317835  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.637637
+qhat:0.0814869
+ID:4  Tint_lrf[i]:0.589621  dt_lrf:0.292793
+time_gluon:0.589621  delta_tg:0.2  time_num:4
+temp_med:0.317835  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:93.0698  delta_HQener:2   HQenergy_num:46
+input:0.6915  0.6921  0.7208  0.7215  96.34  98.47  98.9  101.3  
+rate_EGrid_low:0.708113  rate_EGrid_high:0.708769  max_EGrid_low:97.7915  max_EGrid_high :100.075  
+ delta_Ng_1:0.708464
+ delta_Ng_2:0.125682
+KTfactor:1  runKT:0.637637
+radng[i]:0.0801394
+probCol:0.1786  probRad:0.0770123
+totprob:0.255613
+=============
+ti:2.7
+np:1
+momentum95.3608  1.71701  95.3281  1.28768
+mass:1.27
+position:0.0214561  2.0995  0.0209589
+bulklinear:
+2.69992  0.0214561  2.0995  0.0077627  0.302659  -0.00458622  0.0440183  3.93e-06  0
+bulklinear_end:
+E:91.2558 T:0.302659
+KPamp:2  PLen:91.247  KPsig:5
+KTamp:2  temp0:0.302659  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.643688
+qhat:0.071164
+ID:4  Tint_lrf[i]:0.876707  dt_lrf:0.287086
+time_gluon:0.876707  delta_tg:0.2  time_num:5
+temp_med:0.302659  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:91.2558  delta_HQener:2   HQenergy_num:45
+input:0.9692  0.9703  1.01  1.011  141.9  145.2  145.9  149  
+rate_EGrid_low:0.990896  rate_EGrid_high:0.991943  max_EGrid_low:144.027  max_EGrid_high :147.221  
+ delta_Ng_1:0.991554
+ delta_Ng_2:0.174438
+KTfactor:1  runKT:0.643688
+radng[i]:0.112283
+probCol:0.170943  probRad:0.106209
+totprob:0.277152
+=============
+ti:3
+np:1
+momentum95.3608  1.71701  95.3281  1.28768
+mass:1.27
+position:0.0268577  2.3994  0.0250099
+bulklinear:
+2.9999  0.0268577  2.3994  0.00833681  0.288297  -0.00406285  0.0706297  5.42016e-06  0
+bulklinear_end:
+E:88.855 T:0.288297
+KPamp:2  PLen:88.8459  KPsig:5
+KTamp:2  temp0:0.288297  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.65046
+qhat:0.06234
+ID:4  Tint_lrf[i]:1.15624  dt_lrf:0.279533
+time_gluon:1.15624  delta_tg:0.2  time_num:7
+temp_med:0.288297  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:88.855  delta_HQener:2   HQenergy_num:44
+input:1.52  1.522  1.581  1.583  238.8  244.2  245  250.6  
+rate_EGrid_low:1.56022  rate_EGrid_high:1.56222  max_EGrid_low:242.888  max_EGrid_high :248.42  
+ delta_Ng_1:1.56107
+ delta_Ng_2:0.271029
+KTfactor:1  runKT:0.65046
+radng[i]:0.176294
+probCol:0.158511  probRad:0.161628
+totprob:0.320139
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+=============
+ti:1.2
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.599952  0
+bulklinear:
+1.2  0  0.599952  0  0.400576  0.00101638  -0.000148979  0  0
+bulklinear_end:
+E:100.015 T:0.400576
+KPamp:2  PLen:100.007  KPsig:5
+KTamp:2  temp0:0.400576  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.612196
+qhat:0.156412
+ID:4  Tint_lrf[i]:0.599941  dt_lrf:0.300045
+time_gluon:0.599941  delta_tg:0.2  time_num:4
+temp_med:0.400576  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:100.015  delta_HQener:2   HQenergy_num:50
+input:1.285  1.286  1.325  1.327  157.8  160.8  160.7  164.1  
+rate_EGrid_low:1.28961  rate_EGrid_high:1.29072  max_EGrid_low:158.134  max_EGrid_high :161.18  
+ delta_Ng_1:1.28961
+ delta_Ng_2:0.224788
+KTfactor:1  runKT:0.612196
+radng[i]:0.137614
+probCol:0.175002  probRad:0.128565
+totprob:0.303567
+=============
+ti:1.5
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.899927  0
+bulklinear:
+1.5  0  0.899927  0  0.373965  0.000577765  -6.17945e-05  0  0
+bulklinear_end:
+E:100.006 T:0.373965
+KPamp:2  PLen:99.9981  KPsig:5
+KTamp:2  temp0:0.373965  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.617789
+qhat:0.12838
+ID:4  Tint_lrf[i]:0.89996  dt_lrf:0.300019
+time_gluon:0.89996  delta_tg:0.2  time_num:5
+temp_med:0.373965  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:100.006  delta_HQener:2   HQenergy_num:50
+input:1.621  1.623  1.673  1.675  218.4  222.8  222.8  227.3  
+rate_EGrid_low:1.66224  rate_EGrid_high:1.66424  max_EGrid_low:221.889  max_EGrid_high :226.369  
+ delta_Ng_1:1.66224
+ delta_Ng_2:0.292253
+KTfactor:1  runKT:0.617789
+radng[i]:0.18055
+probCol:0.164096  probRad:0.165189
+totprob:0.329285
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.143709  99.9981  0.373965  0.36  0.38  54.5982  148.413  13  14  6  7
+flavor_end
+p1:99.9981  temp:0.373965
+min_p1:0  bin_p1:2
+index_p1:49  index_T:27
+ct1_loop:4
+max_e2:15  xw:0.615895  temp:0.373965
+ct2_loop:27
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.373965  0.790833  0  99.9453  0.285061  0.230338  100  0.260822
+2-2_end
+KINT:1
+pc4:100  0  99.9919  0
+Elab:100
+vc0:0  0.000577765  -6.17945e-05  0
+pc4:100.006  -0.0577783  99.9981  0
+Ejp:100.006  qhat0:0.790833
+prob23:0.501661
+2-3
+4  0.373965  0.790833  0.000577765  -6.17945e-05  0  
+96.9573  -0.186342  96.9443  -0.937523  
+0.25491  0.0668046  -0.11674  0.216536  
+0.230338  0.000264553  -0.227563  -0.0356422  
+3.01812  0.119802  2.93684  0.685345  
+0.260822  0  0.89996  100.006  
+130.041  0.00889233  0.991108
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:1.8
+np:1
+momentum96.9573  -0.186342  96.9443  -0.937523
+mass:1.27
+position:-0.000576569  1.19989  -0.00290083
+bulklinear:
+1.8  -0.000576569  1.19989  -0.00161157  0.352668  -0.00127974  0.00285883  -2.36693e-07  0
+bulklinear_end:
+E:96.6781 T:0.352668
+KPamp:2  PLen:96.6697  KPsig:5
+KTamp:2  temp0:0.352668  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.625467
+qhat:0.109014
+ID:4  Tint_lrf[i]:0.299136  dt_lrf:0.299136
+time_gluon:0.299136  delta_tg:0.2  time_num:2
+temp_med:0.352668  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:96.6781  delta_HQener:2   HQenergy_num:48
+input:0.1216  0.1217  0.1267  0.1269  15.14  15.51  15.62  15.94  
+rate_EGrid_low:0.124322  rate_EGrid_high:0.124475  max_EGrid_low:15.3962  max_EGrid_high :15.7395  
+ delta_Ng_1:0.124374
+ delta_Ng_2:0.0220745
+KTfactor:1  runKT:0.625467
+radng[i]:0.0138069
+probCol:0.194086  probRad:0.013712
+totprob:0.207798
+=============
+ti:2.1
+np:1
+momentum96.9573  -0.186342  96.9443  -0.937523
+mass:1.27
+position:-0.00115314  1.49985  -0.00580166
+bulklinear:
+2.09999  -0.00115314  1.49985  -0.0027627  0.334341  -0.00336211  0.0106591  -6.89725e-07  0
+bulklinear_end:
+E:95.9255 T:0.334341
+KPamp:2  PLen:95.9171  KPsig:5
+KTamp:2  temp0:0.334341  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.630652
+qhat:0.0937028
+ID:4  Tint_lrf[i]:0.595944  dt_lrf:0.296808
+time_gluon:0.595944  delta_tg:0.2  time_num:4
+temp_med:0.334341  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:95.9255  delta_HQener:2   HQenergy_num:47
+input:0.7825  0.7832  0.8139  0.8147  106.8  109.2  109.8  112.1  
+rate_EGrid_low:0.809762  rate_EGrid_high:0.810549  max_EGrid_low:109.405  max_EGrid_high :111.718  
+ delta_Ng_1:0.81052
+ delta_Ng_2:0.14399
+KTfactor:1  runKT:0.630652
+radng[i]:0.0908077
+probCol:0.177211  probRad:0.0868067
+totprob:0.264017
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+11  4  2  2  0.143194  95.9171  0.334341  0.32  0.34  54.5982  148.413  11  12  6  7
+flavor_end
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  11  0.334341  0.632124  0  95.6768  1.75289  0.472437  96.9573  1.44228
+2-2_end
+KINT:1
+pc4:96.9573  -0.186342  96.9443  -0.937523
+Elab:96.9573
+vc0:0  -0.00336205  0.0106589  -0.00580229
+pc4:95.9255  0.137912  95.9163  -0.37792
+Ejp:95.9255  qhat0:0.632124
+prob23:0.328791
+=============
+ti:2.4
+np:1
+momentum95.6768  -1.38972  95.6429  -1.71633
+mass:1.27
+position:-0.00551069  1.79974  -0.0111833
+bulklinear:
+2.39997  -0.00551069  1.79974  -0.00465975  0.317842  -0.00503791  0.0244041  -1.73004e-06  0
+bulklinear_end:
+E:93.3515 T:0.317842
+KPamp:2  PLen:93.3429  KPsig:5
+KTamp:2  temp0:0.317842  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.637372
+qhat:0.0814545
+ID:4  Tint_lrf[i]:0.888652  dt_lrf:0.292709
+time_gluon:0.888652  delta_tg:0.2  time_num:5
+temp_med:0.317842  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:93.3515  delta_HQener:2   HQenergy_num:46
+input:1.095  1.097  1.139  1.14  157  160.4  161  164.5  
+rate_EGrid_low:1.12001  rate_EGrid_high:1.12144  max_EGrid_low:159.274  max_EGrid_high :162.73  
+ delta_Ng_1:1.12098
+ delta_Ng_2:0.198712
+KTfactor:1  runKT:0.637372
+radng[i]:0.126654
+probCol:0.170131  probRad:0.118961
+totprob:0.289092
+=============
+ti:2.7
+np:1
+momentum95.6768  -1.38972  95.6429  -1.71633
+mass:1.27
+position:-0.00986825  2.09963  -0.016565
+bulklinear:
+2.69995  -0.00986825  2.09963  -0.00613525  0.302674  -0.00622177  0.0440947  -3.10568e-06  0
+bulklinear_end:
+E:91.5263 T:0.302674
+KPamp:2  PLen:91.5175  KPsig:5
+KTamp:2  temp0:0.302674  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.64342
+qhat:0.0711403
+ID:4  Tint_lrf[i]:1.17564  dt_lrf:0.286986
+time_gluon:1.17564  delta_tg:0.2  time_num:7
+temp_med:0.302674  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:91.5263  delta_HQener:2   HQenergy_num:45
+input:1.707  1.709  1.771  1.774  263.7  269.5  270.2  276.3  
+rate_EGrid_low:1.74123  rate_EGrid_high:1.74376  max_EGrid_low:267.176  max_EGrid_high :273.137  
+ delta_Ng_1:1.74316
+ delta_Ng_2:0.306408
+KTfactor:1  runKT:0.64342
+radng[i]:0.197149
+probCol:0.156704  probRad:0.178932
+totprob:0.335636
+=============
+ti:3
+np:1
+momentum95.6768  -1.38972  95.6429  -1.71633
+mass:1.27
+position:-0.0142258  2.39953  -0.0219466
+bulklinear:
+2.99992  -0.0142258  2.39953  -0.00731567  0.288328  -0.00658589  0.0706531  -4.75498e-06  0
+bulklinear_end:
+E:89.1202 T:0.288328
+KPamp:2  PLen:89.1112  KPsig:5
+KTamp:2  temp0:0.288328  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.650179
+qhat:0.0623275
+ID:4  Tint_lrf[i]:1.45508  dt_lrf:0.279441
+time_gluon:1.45508  delta_tg:0.2  time_num:8
+temp_med:0.288328  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:89.1202  delta_HQener:2   HQenergy_num:44
+input:1.844  1.846  1.915  1.917  300.8  307.7  308.7  315.8  
+rate_EGrid_low:1.89125  rate_EGrid_high:1.89325  max_EGrid_low:306.058  max_EGrid_high :313.091  
+ delta_Ng_1:1.89237
+ delta_Ng_2:0.328269
+KTfactor:1  runKT:0.650179
+radng[i]:0.213434
+probCol:0.152413  probRad:0.192194
+totprob:0.344607
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+=============
+ti:1.2
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.599952  0
+bulklinear:
+1.2  0  0.599952  0  0.400576  0.00101638  -0.000148979  0  0
+bulklinear_end:
+E:100.015 T:0.400576
+KPamp:2  PLen:100.007  KPsig:5
+KTamp:2  temp0:0.400576  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.612196
+qhat:0.156412
+ID:4  Tint_lrf[i]:0.599941  dt_lrf:0.300045
+time_gluon:0.599941  delta_tg:0.2  time_num:4
+temp_med:0.400576  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:100.015  delta_HQener:2   HQenergy_num:50
+input:1.285  1.286  1.325  1.327  157.8  160.8  160.7  164.1  
+rate_EGrid_low:1.28961  rate_EGrid_high:1.29072  max_EGrid_low:158.134  max_EGrid_high :161.18  
+ delta_Ng_1:1.28961
+ delta_Ng_2:0.224788
+KTfactor:1  runKT:0.612196
+radng[i]:0.137614
+probCol:0.175002  probRad:0.128565
+totprob:0.303567
+=============
+ti:1.5
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.899927  0
+bulklinear:
+1.5  0  0.899927  0  0.373965  0.000577765  -6.17945e-05  0  0
+bulklinear_end:
+E:100.006 T:0.373965
+KPamp:2  PLen:99.9981  KPsig:5
+KTamp:2  temp0:0.373965  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.617789
+qhat:0.12838
+ID:4  Tint_lrf[i]:0.89996  dt_lrf:0.300019
+time_gluon:0.89996  delta_tg:0.2  time_num:5
+temp_med:0.373965  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:100.006  delta_HQener:2   HQenergy_num:50
+input:1.621  1.623  1.673  1.675  218.4  222.8  222.8  227.3  
+rate_EGrid_low:1.66224  rate_EGrid_high:1.66424  max_EGrid_low:221.889  max_EGrid_high :226.369  
+ delta_Ng_1:1.66224
+ delta_Ng_2:0.292253
+KTfactor:1  runKT:0.617789
+radng[i]:0.18055
+probCol:0.164096  probRad:0.165189
+totprob:0.329285
+=============
+ti:1.8
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  1.1999  0
+bulklinear:
+1.8  0  1.1999  0  0.352668  -0.00126476  0.00285386  0  0
+bulklinear_end:
+E:99.7151 T:0.352668
+KPamp:2  PLen:99.707  KPsig:5
+KTamp:2  temp0:0.352668  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.622878
+qhat:0.108555
+ID:4  Tint_lrf[i]:1.19911  dt_lrf:0.299145
+time_gluon:1.19911  delta_tg:0.2  time_num:7
+temp_med:0.352668  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:99.7151  delta_HQener:2   HQenergy_num:49
+input:2.405  2.408  2.48  2.483  361.7  369.2  369.5  377.1  
+rate_EGrid_low:2.44503  rate_EGrid_high:2.44803  max_EGrid_low:365.863  max_EGrid_high :373.416  
+ delta_Ng_1:2.4476
+ delta_Ng_2:0.432597
+KTfactor:1  runKT:0.622878
+radng[i]:0.269455
+probCol:0.147563  probRad:0.236204
+totprob:0.383767
+=============
+ti:2.1
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  1.49988  0
+bulklinear:
+2.1  0  1.49988  0  0.334341  -0.00332025  0.0106501  0  0
+bulklinear_end:
+E:98.9412 T:0.334341
+KPamp:2  PLen:98.9331  KPsig:5
+KTamp:2  temp0:0.334341  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.628018
+qhat:0.0932846
+ID:4  Tint_lrf[i]:1.49593  dt_lrf:0.296824
+time_gluon:1.49593  delta_tg:0.2  time_num:8
+temp_med:0.334341  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:98.9412  delta_HQener:2   HQenergy_num:49
+input:2.545  2.548  2.629  2.631  417.4  425.9  426.8  435.7  
+rate_EGrid_low:2.61793  rate_EGrid_high:2.62006  max_EGrid_low:425.561  max_EGrid_high :434.408  
+ delta_Ng_1:2.61893
+ delta_Ng_2:0.463207
+KTfactor:1  runKT:0.628018
+radng[i]:0.290902
+probCol:0.142333  probRad:0.252411
+totprob:0.394744
+=============
+ti:2.4
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  1.79985  0
+bulklinear:
+2.4  0  1.79985  0  0.317841  -0.00479574  0.024373  0  0
+bulklinear_end:
+E:97.593 T:0.317841
+KPamp:2  PLen:97.5847  KPsig:5
+KTamp:2  temp0:0.317841  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.633517
+qhat:0.0809025
+ID:4  Tint_lrf[i]:1.78871  dt_lrf:0.292779
+time_gluon:1.78871  delta_tg:0.2  time_num:10
+temp_med:0.317841  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:97.593  delta_HQener:2   HQenergy_num:48
+input:3.086  3.089  3.189  3.194  555.8  567.3  569.1  581  
+rate_EGrid_low:3.14453  rate_EGrid_high:3.14867  max_EGrid_low:563.358  max_EGrid_high :575.085  
+ delta_Ng_1:3.14782
+ delta_Ng_2:0.554361
+KTfactor:1  runKT:0.633517
+radng[i]:0.351197
+probCol:0.13222  probRad:0.296155
+totprob:0.428375
+=============
+ti:2.7
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  2.09983  0
+bulklinear:
+2.7  0  2.09983  0  0.302671  -0.00572193  0.0440604  0  0
+bulklinear_end:
+E:95.6888 T:0.302671
+KPamp:2  PLen:95.6804  KPsig:5
+KTamp:2  temp0:0.302671  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.639489
+qhat:0.0706314
+ID:4  Tint_lrf[i]:2.07577  dt_lrf:0.287066
+time_gluon:2.07577  delta_tg:0.2  time_num:11
+temp_med:0.302671  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:95.6888  delta_HQener:2   HQenergy_num:47
+input:3.137  3.14  3.247  3.251  592.3  605.1  607.3  620.1  
+rate_EGrid_low:3.19576  rate_EGrid_high:3.1993  max_EGrid_low:600.313  max_EGrid_high :613.113  
+ delta_Ng_1:3.19875
+ delta_Ng_2:0.558417
+KTfactor:1  runKT:0.639489
+radng[i]:0.357102
+probCol:0.129879  probRad:0.300299
+totprob:0.430178
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.140908  95.6804  0.302671  0.3  0.32  54.5982  148.413  10  11  6  7
+flavor_end
+p1:95.6804  temp:0.302671
+min_p1:0  bin_p1:2
+index_p1:47  index_T:20
+ct1_loop:14
+max_e2:15  xw:1.85374  temp:0.302671
+ct2_loop:191
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.302671  0.518041  0  99.9351  0.602099  0.537241  100  0.47624
+2-2_end
+KINT:1
+pc4:100  0  99.9919  0
+Elab:100
+vc0:0  -0.00572193  0.0440604  0
+pc4:95.6888  0.560135  95.6787  0
+Ejp:95.6888  qhat0:0.518041
+prob23:0.69808
+2-3
+4  0.302671  0.518041  -0.00572193  0.0440604  0  
+97.3405  -0.304718  97.3309  0.403846  
+0.528603  -0.176973  -0.352841  0.351576  
+0.537241  -0.00638336  -0.529155  -0.0926371  
+2.66814  0.475308  2.48472  -0.848058  
+0.47624  0  2.07577  95.6888  
+371.641  0.00752179  0.992478
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:3
+np:1
+momentum97.3405  -0.304718  97.3309  0.403846
+mass:1.27
+position:-0.00093913  2.3998  0.00124464
+bulklinear:
+3  -0.00093913  2.3998  0.000414879  0.288321  -0.00579956  0.0706367  2.69712e-07  0
+bulklinear_end:
+E:90.6912 T:0.288321
+KPamp:2  PLen:90.6823  KPsig:5
+KTamp:2  temp0:0.288321  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.648598
+qhat:0.0621401
+ID:4  Tint_lrf[i]:0.279507  dt_lrf:0.279507
+time_gluon:0.279507  delta_tg:0.2  time_num:2
+temp_med:0.288321  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:90.6912  delta_HQener:2   HQenergy_num:45
+input:0.06649  0.06657  0.06996  0.07003  9.501  9.701  9.826  10.04  
+rate_EGrid_low:0.068795  rate_EGrid_high:0.0688684  max_EGrid_low:9.71689  max_EGrid_high :9.92619  
+ delta_Ng_1:0.0688204
+ delta_Ng_2:0.0119059
+KTfactor:1  runKT:0.648598
+radng[i]:0.00772216
+probCol:0.185266  probRad:0.00769242
+totprob:0.192958
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+11  4  -2  -2  0.145655  90.6823  0.288321  0.28  0.3  54.5982  148.413  9  10  6  7
+flavor_end
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  11  0.288321  0.470085  0  96.1949  1.73806  0.59251  97.3405  1.64257
+2-2_end
+KINT:1
+pc4:97.3405  -0.304718  97.3309  0.403846
+Elab:97.3405
+vc0:0  -0.00579956  0.0706367  0.00124491
+pc4:90.6912  0.241219  90.6816  0.286657
+Ejp:90.6912  qhat0:0.470085
+prob23:0.0398657
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+=============
+ti:1.2
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.599952  0
+bulklinear:
+1.2  0  0.599952  0  0.400576  0.00101638  -0.000148979  0  0
+bulklinear_end:
+E:100.015 T:0.400576
+KPamp:2  PLen:100.007  KPsig:5
+KTamp:2  temp0:0.400576  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.612196
+qhat:0.156412
+ID:4  Tint_lrf[i]:0.599941  dt_lrf:0.300045
+time_gluon:0.599941  delta_tg:0.2  time_num:4
+temp_med:0.400576  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:100.015  delta_HQener:2   HQenergy_num:50
+input:1.285  1.286  1.325  1.327  157.8  160.8  160.7  164.1  
+rate_EGrid_low:1.28961  rate_EGrid_high:1.29072  max_EGrid_low:158.134  max_EGrid_high :161.18  
+ delta_Ng_1:1.28961
+ delta_Ng_2:0.224788
+KTfactor:1  runKT:0.612196
+radng[i]:0.137614
+probCol:0.175002  probRad:0.128565
+totprob:0.303567
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+11  4  3  3  0.147183  100.007  0.400576  0.4  0.42  54.5982  148.413  15  16  6  7
+flavor_end
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  11  0.400576  0.907385  0  98.3476  3.03362  1.38125  100  2.69038
+2-2_end
+KINT:1
+pc4:100  0  99.9919  0
+Elab:100
+vc0:0  0.00101638  -0.000148979  0
+pc4:100.015  -0.101646  100.007  0
+Ejp:100.015  qhat0:0.907385
+prob23:0.423514
+=============
+ti:1.5
+np:1
+momentum98.3476  -0.434959  98.3026  2.65498
+mass:1.27
+position:-0.0013268  0.899814  0.00809877
+bulklinear:
+1.49998  -0.0013268  0.899814  0.00539923  0.373967  0.000558206  -5.29676e-05  3.70052e-07  0
+bulklinear_end:
+E:98.3348 T:0.373967
+KPamp:2  PLen:98.3266  KPsig:5
+KTamp:2  temp0:0.373967  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.619173
+qhat:0.128659
+ID:4  Tint_lrf[i]:0.899902  dt_lrf:0.299961
+time_gluon:0.899902  delta_tg:0.2  time_num:5
+temp_med:0.373967  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:98.3348  delta_HQener:2   HQenergy_num:49
+input:1.62  1.621  1.671  1.673  214  218.4  218.3  222.8  
+rate_EGrid_low:1.66046  rate_EGrid_high:1.66226  max_EGrid_low:217.411  max_EGrid_high :221.891  
+ delta_Ng_1:1.66076
+ delta_Ng_2:0.292567
+KTfactor:1  runKT:0.619173
+radng[i]:0.18115
+probCol:0.165559  probRad:0.16569
+totprob:0.331249
+=============
+ti:1.8
+np:1
+momentum98.3476  -0.434959  98.3026  2.65498
+mass:1.27
+position:-0.0026536  1.19968  0.0161975
+bulklinear:
+1.79993  -0.0026536  1.19968  0.00899888  0.352673  -0.00133255  0.00287562  1.32149e-06  0
+bulklinear_end:
+E:98.0348 T:0.352673
+KPamp:2  PLen:98.0265  KPsig:5
+KTamp:2  temp0:0.352673  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.624296
+qhat:0.108811
+ID:4  Tint_lrf[i]:1.19895  dt_lrf:0.299046
+time_gluon:1.19895  delta_tg:0.2  time_num:7
+temp_med:0.352673  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:98.0348  delta_HQener:2   HQenergy_num:49
+input:2.405  2.408  2.48  2.483  361.7  369.2  369.5  377.1  
+rate_EGrid_low:2.44509  rate_EGrid_high:2.44809  max_EGrid_low:365.869  max_EGrid_high :373.423  
+ delta_Ng_1:2.44514
+ delta_Ng_2:0.433021
+KTfactor:1  runKT:0.624296
+radng[i]:0.270333
+probCol:0.148907  probRad:0.236875
+totprob:0.385782
+=============
+ti:2.1
+np:1
+momentum98.3476  -0.434959  98.3026  2.65498
+mass:1.27
+position:-0.0039804  1.49954  0.0242963
+bulklinear:
+2.09986  -0.0039804  1.49954  0.0115702  0.334349  -0.00346295  0.0106761  2.88798e-06  0
+bulklinear_end:
+E:97.2673 T:0.334349
+KPamp:2  PLen:97.259  KPsig:5
+KTamp:2  temp0:0.334349  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.629465
+qhat:0.0935212
+ID:4  Tint_lrf[i]:1.49565  dt_lrf:0.296704
+time_gluon:1.49565  delta_tg:0.2  time_num:8
+temp_med:0.334349  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:97.2673  delta_HQener:2   HQenergy_num:48
+input:2.542  2.545  2.626  2.629  408.8  417.4  418.1  426.8  
+rate_EGrid_low:2.61506  rate_EGrid_high:2.61806  max_EGrid_low:416.889  max_EGrid_high :425.576  
+ delta_Ng_1:2.61696
+ delta_Ng_2:0.463813
+KTfactor:1  runKT:0.629465
+radng[i]:0.291954
+probCol:0.143656  probRad:0.253197
+totprob:0.396853
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.141849  97.259  0.334349  0.32  0.34  54.5982  148.413  11  12  6  7
+flavor_end
+p1:97.259  temp:0.334349
+min_p1:0  bin_p1:2
+index_p1:48  index_T:23
+ct1_loop:9
+max_e2:15  xw:2.20361  temp:0.334349
+ct2_loop:15
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.334349  0.632153  0  96.719  2.35111  0.722447  98.3476  2.20971
+2-2_end
+KINT:1
+pc4:98.3476  -0.434959  98.3026  2.65498
+Elab:98.3476
+vc0:0  -0.00346192  0.010673  0.0242944
+pc4:97.2673  -0.096296  97.2585  0.278382
+Ejp:97.2673  qhat0:0.632153
+prob23:0.638012
+2-3
+4  0.334349  0.632153  -0.00346192  0.010673  0.0242944  
+89.8686  -1.94754  89.7685  3.54619  
+2.6262  2.17297  1.35761  -0.576202  
+0.722447  -0.00186263  -0.662523  -0.28808  
+6.57526  -0.662248  6.51397  -0.603082  
+2.20971  0  1.49565  97.2673  
+252.313  0.00817418  0.991826
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:2.4
+np:1
+momentum89.8686  -1.94754  89.7685  3.54619
+mass:1.27
+position:-0.0104817  1.79921  0.0361342
+bulklinear:
+2.39973  -0.0104817  1.79921  0.0150571  0.317856  -0.00525383  0.0244158  5.5886e-06  0
+bulklinear_end:
+E:87.6245 T:0.317856
+KPamp:2  PLen:87.6153  KPsig:5
+KTamp:2  temp0:0.317856  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.642942
+qhat:0.0822524
+ID:4  Tint_lrf[i]:0.292509  dt_lrf:0.292509
+time_gluon:0.292509  delta_tg:0.2  time_num:2
+temp_med:0.317856  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:87.6245  delta_HQener:2   HQenergy_num:43
+input:0.08891  0.08901  0.09309  0.09319  11.04  11.29  11.41  11.67  
+rate_EGrid_low:0.0912978  rate_EGrid_high:0.0913978  max_EGrid_low:11.2514  max_EGrid_high :11.5071  
+ delta_Ng_1:0.091379
+ delta_Ng_2:0.0163438
+KTfactor:1  runKT:0.642942
+radng[i]:0.0105081
+probCol:0.198024  probRad:0.0104531
+totprob:0.208477
+=============
+ti:2.7
+np:1
+momentum89.8686  -1.94754  89.7685  3.54619
+mass:1.27
+position:-0.016983  2.09887  0.0479721
+bulklinear:
+2.69957  -0.016983  2.09887  0.0177693  0.302695  -0.00657964  0.0440854  8.99135e-06  0
+bulklinear_end:
+E:85.917 T:0.302695
+KPamp:2  PLen:85.9076  KPsig:5
+KTamp:2  temp0:0.302695  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.649089
+qhat:0.0718756
+ID:4  Tint_lrf[i]:0.579317  dt_lrf:0.286809
+time_gluon:0.579317  delta_tg:0.2  time_num:4
+temp_med:0.302695  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:85.917  delta_HQener:2   HQenergy_num:42
+input:0.6044  0.6052  0.6316  0.6324  80.68  82.53  83.1  85.12  
+rate_EGrid_low:0.619062  rate_EGrid_high:0.619862  max_EGrid_low:81.9844  max_EGrid_high :83.9261  
+ delta_Ng_1:0.619828
+ delta_Ng_2:0.109987
+KTfactor:1  runKT:0.649089
+radng[i]:0.0713912
+probCol:0.18422  probRad:0.0689024
+totprob:0.253123
+=============
+ti:3
+np:1
+momentum89.8686  -1.94754  89.7685  3.54619
+mass:1.27
+position:-0.0234843  2.39854  0.05981
+bulklinear:
+2.9994  -0.0234843  2.39854  0.0199393  0.288357  -0.00713252  0.0706035  1.29543e-05  0
+bulklinear_end:
+E:83.6763 T:0.288357
+KPamp:2  PLen:83.6667  KPsig:5
+KTamp:2  temp0:0.288357  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.655946
+qhat:0.0630066
+ID:4  Tint_lrf[i]:0.858646  dt_lrf:0.279329
+time_gluon:0.858646  delta_tg:0.2  time_num:5
+temp_med:0.288357  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:83.6763  delta_HQener:2   HQenergy_num:41
+input:0.8475  0.8487  0.8856  0.8868  118.9  121.6  122.2  125.3  
+rate_EGrid_low:0.87308  rate_EGrid_high:0.87428  max_EGrid_low:121.116  max_EGrid_high :124.084  
+ delta_Ng_1:0.874086
+ delta_Ng_2:0.153171
+KTfactor:1  runKT:0.655946
+radng[i]:0.100472
+probCol:0.17688  probRad:0.0955893
+totprob:0.272469
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+=============
+ti:1.2
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.599952  0
+bulklinear:
+1.2  0  0.599952  0  0.400576  0.00101638  -0.000148979  0  0
+bulklinear_end:
+E:100.015 T:0.400576
+KPamp:2  PLen:100.007  KPsig:5
+KTamp:2  temp0:0.400576  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.612196
+qhat:0.156412
+ID:4  Tint_lrf[i]:0.599941  dt_lrf:0.300045
+time_gluon:0.599941  delta_tg:0.2  time_num:4
+temp_med:0.400576  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:100.015  delta_HQener:2   HQenergy_num:50
+input:1.285  1.286  1.325  1.327  157.8  160.8  160.7  164.1  
+rate_EGrid_low:1.28961  rate_EGrid_high:1.29072  max_EGrid_low:158.134  max_EGrid_high :161.18  
+ delta_Ng_1:1.28961
+ delta_Ng_2:0.224788
+KTfactor:1  runKT:0.612196
+radng[i]:0.137614
+probCol:0.175002  probRad:0.128565
+totprob:0.303567
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.147183  100.007  0.400576  0.4  0.42  54.5982  148.413  15  16  6  7
+flavor_end
+p1:100.007  temp:0.400576
+min_p1:0  bin_p1:2
+index_p1:50  index_T:30
+ct1_loop:32
+max_e2:15  xw:0.317496  temp:0.400576
+ct2_loop:21
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.400576  0.907385  0  98.9874  1.13977  0.127194  100  0.753469
+2-2_end
+KINT:1
+pc4:100  0  99.9919  0
+Elab:100
+vc0:0  0.00101638  -0.000148979  0
+pc4:100.015  -0.101646  100.007  0
+Ejp:100.015  qhat0:0.907385
+prob23:0.423514
+2-3
+4  0.400576  0.907385  0.00101638  -0.000148979  0  
+77.2974  -0.0832625  77.2869  0.110092  
+21.3137  -0.527898  21.2979  -0.630011  
+0.127194  0.000218092  -0.0874085  -0.0924018  
+1.51606  0.611378  1.3198  0.427518  
+0.753469  0  0.599941  100.015  
+91.8785  0.00952425  0.990476
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:1.5
+np:1
+momentum77.2974  -0.0832625  77.2869  0.110092
+mass:1.27
+position:-0.000323151  0.899911  0.000427279
+bulklinear:
+1.5  -0.000323151  0.899911  0.000284853  0.373965  0.000572962  -5.96471e-05  1.95243e-08  0
+bulklinear_end:
+E:77.3021 T:0.373965
+KPamp:2  PLen:77.2916  KPsig:5
+KTamp:2  temp0:0.373965  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.639653
+qhat:0.132732
+ID:4  Tint_lrf[i]:0.300018  dt_lrf:0.300018
+time_gluon:0.300018  delta_tg:0.2  time_num:3
+temp_med:0.373965  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:77.3021  delta_HQener:2   HQenergy_num:38
+input:0.5208  0.5216  0.5402  0.5412  50.94  52.33  52.21  53.65  
+rate_EGrid_low:0.536185  rate_EGrid_high:0.537143  max_EGrid_low:51.9471  max_EGrid_high :53.3768  
+ delta_Ng_1:0.536809
+ delta_Ng_2:0.0975798
+KTfactor:1  runKT:0.639653
+radng[i]:0.0624172
+probCol:0.209094  probRad:0.0605091
+totprob:0.269603
+=============
+ti:1.8
+np:1
+momentum77.2974  -0.0832625  77.2869  0.110092
+mass:1.27
+position:-0.000646302  1.19987  0.000854558
+bulklinear:
+1.8  -0.000646302  1.19987  0.000474754  0.352668  -0.00128143  0.00285939  6.97276e-08  0
+bulklinear_end:
+E:77.0766 T:0.352668
+KPamp:2  PLen:77.0662  KPsig:5
+KTamp:2  temp0:0.352668  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.64511
+qhat:0.112445
+ID:4  Tint_lrf[i]:0.599161  dt_lrf:0.299143
+time_gluon:0.599161  delta_tg:0.2  time_num:4
+temp_med:0.352668  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:77.0766  delta_HQener:2   HQenergy_num:38
+input:0.9006  0.902  0.9342  0.9358  95.7  98.06  97.96  100.7  
+rate_EGrid_low:0.91853  rate_EGrid_high:0.920037  max_EGrid_low:96.906  max_EGrid_high :99.4688  
+ delta_Ng_1:0.919341
+ delta_Ng_2:0.16831
+KTfactor:1  runKT:0.64511
+radng[i]:0.108578
+probCol:0.197396  probRad:0.102891
+totprob:0.300288
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.163654  77.0662  0.352668  0.34  0.36  54.5982  148.413  12  13  6  7
+flavor_end
+p1:77.0662  temp:0.352668
+min_p1:0  bin_p1:2
+index_p1:38  index_T:25
+ct1_loop:6
+max_e2:15  xw:2.40336  temp:0.352668
+ct2_loop:49
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.352668  0.703323  0  77.1633  0.98367  0.849579  77.2974  0.164543
+2-2_end
+KINT:1
+pc4:77.2974  -0.0832625  77.2869  0.110092
+Elab:77.2974
+vc0:0  -0.00128143  0.00285939  0.000854627
+pc4:77.0766  0.0156474  77.0662  0.0441255
+Ejp:77.0766  qhat0:0.703323
+prob23:0.342643
+=============
+ti:2.1
+np:1
+momentum77.1633  -0.246642  77.1524  0.0916215
+mass:1.27
+position:-0.00160521  1.49983  0.00121077
+bulklinear:
+2.1  -0.00160521  1.49983  0.000576557  0.334341  -0.00337846  0.0106627  1.43941e-07  0
+bulklinear_end:
+E:76.3446 T:0.334341
+KPamp:2  PLen:76.334  KPsig:5
+KTamp:2  temp0:0.334341  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.650785
+qhat:0.0968285
+ID:4  Tint_lrf[i]:0.895978  dt_lrf:0.296817
+time_gluon:0.895978  delta_tg:0.2  time_num:5
+temp_med:0.334341  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:76.3446  delta_HQener:2   HQenergy_num:38
+input:1.214  1.216  1.259  1.261  139.4  143.2  142.6  146.5  
+rate_EGrid_low:1.25307  rate_EGrid_high:1.25507  max_EGrid_low:142.178  max_EGrid_high :146.065  
+ delta_Ng_1:1.25341
+ delta_Ng_2:0.230106
+KTfactor:1  runKT:0.650785
+radng[i]:0.14975
+probCol:0.187639  probRad:0.139077
+totprob:0.326716
+=============
+ti:2.4
+np:1
+momentum77.1633  -0.246642  77.1524  0.0916215
+mass:1.27
+position:-0.00256412  1.79978  0.00156698
+bulklinear:
+2.4  -0.00256412  1.79978  0.000652909  0.317841  -0.00490832  0.0243873  2.4242e-07  0
+bulklinear_end:
+E:75.3038 T:0.317841
+KPamp:2  PLen:75.2931  KPsig:5
+KTamp:2  temp0:0.317841  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.656693
+qhat:0.0841405
+ID:4  Tint_lrf[i]:1.18875  dt_lrf:0.292771
+time_gluon:1.18875  delta_tg:0.2  time_num:7
+temp_med:0.317841  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:75.3038  delta_HQener:2   HQenergy_num:37
+input:1.88  1.883  1.946  1.949  233  239.3  238.5  245  
+rate_EGrid_low:1.9175  rate_EGrid_high:1.9205  max_EGrid_low:236.125  max_EGrid_high :242.539  
+ delta_Ng_1:1.91946
+ delta_Ng_2:0.351554
+KTfactor:1  runKT:0.656693
+radng[i]:0.230863
+probCol:0.171185  probRad:0.206152
+totprob:0.377337
+=============
+ti:2.7
+np:1
+momentum77.1633  -0.246642  77.1524  0.0916215
+mass:1.27
+position:-0.00352303  2.09974  0.00192319
+bulklinear:
+2.7  -0.00352303  2.09974  0.000712293  0.302672  -0.00590029  0.0440725  3.60601e-07  0
+bulklinear_end:
+E:73.8346 T:0.302672
+KPamp:2  PLen:73.8236  KPsig:5
+KTamp:2  temp0:0.302672  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.663112
+qhat:0.0735931
+ID:4  Tint_lrf[i]:1.47581  dt_lrf:0.287058
+time_gluon:1.47581  delta_tg:0.2  time_num:8
+temp_med:0.302672  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:73.8346  delta_HQener:2   HQenergy_num:36
+input:2.035  2.039  2.109  2.113  265.4  272.8  272.1  279.7  
+rate_EGrid_low:2.07454  rate_EGrid_high:2.07854  max_EGrid_low:268.98  max_EGrid_high :276.487  
+ delta_Ng_1:2.07821
+ delta_Ng_2:0.378001
+KTfactor:1  runKT:0.663112
+radng[i]:0.250657
+probCol:0.166023  probRad:0.221711
+totprob:0.387734
+=============
+ti:3
+np:1
+momentum77.1633  -0.246642  77.1524  0.0916215
+mass:1.27
+position:-0.00448194  2.3997  0.0022794
+bulklinear:
+3  -0.00448194  2.3997  0.000759801  0.288322  -0.00600912  0.0706404  4.9393e-07  0
+bulklinear_end:
+E:71.8927 T:0.288322
+KPamp:2  PLen:71.8814  KPsig:5
+KTamp:2  temp0:0.288322  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.670296
+qhat:0.0645759
+ID:4  Tint_lrf[i]:1.75532  dt_lrf:0.279508
+time_gluon:1.75532  delta_tg:0.2  time_num:10
+temp_med:0.288322  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:71.8927  delta_HQener:2   HQenergy_num:35
+input:2.447  2.452  2.538  2.543  348.2  358.3  357.4  367.7  
+rate_EGrid_low:2.50747  rate_EGrid_high:2.51247  max_EGrid_low:354.313  max_EGrid_high :364.546  
+ delta_Ng_1:2.5122
+ delta_Ng_2:0.451643
+KTfactor:1  runKT:0.670296
+radng[i]:0.302734
+probCol:0.155716  probRad:0.261205
+totprob:0.416921
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+11  4  -1  -1  0.166827  71.8814  0.288322  0.28  0.3  54.5982  148.413  9  10  6  7
+flavor_end
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  11  0.288322  0.470088  0  77.0606  1.49193  1.38919  77.1633  0.575487
+2-2_end
+KINT:1
+pc4:77.1633  -0.246642  77.1524  0.0916215
+Elab:77.1633
+vc0:0  -0.00600911  0.0706402  0.00227989
+pc4:71.8927  0.201769  71.8811  -0.0785086
+Ejp:71.8927  qhat0:0.470088
+prob23:0.626509
+2-3
+4  0.288322  0.470088  -0.00600911  0.0706402  0.00227989  
+76.2531  -1.17987  76.2282  0.892162  
+1.42207  0.395591  -0.901494  -1.02621  
+1.38919  -0.0124134  -1.2435  -0.619206  
+0.877347  0.52522  0.582245  -0.39354  
+0.575487  0  1.75532  71.8927  
+234.123  0.00953685  0.990463
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+=============
+ti:1.2
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.599952  0
+bulklinear:
+1.2  0  0.599952  0  0.400576  0.00101638  -0.000148979  0  0
+bulklinear_end:
+E:100.015 T:0.400576
+KPamp:2  PLen:100.007  KPsig:5
+KTamp:2  temp0:0.400576  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.612196
+qhat:0.156412
+ID:4  Tint_lrf[i]:0.599941  dt_lrf:0.300045
+time_gluon:0.599941  delta_tg:0.2  time_num:4
+temp_med:0.400576  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:100.015  delta_HQener:2   HQenergy_num:50
+input:1.285  1.286  1.325  1.327  157.8  160.8  160.7  164.1  
+rate_EGrid_low:1.28961  rate_EGrid_high:1.29072  max_EGrid_low:158.134  max_EGrid_high :161.18  
+ delta_Ng_1:1.28961
+ delta_Ng_2:0.224788
+KTfactor:1  runKT:0.612196
+radng[i]:0.137614
+probCol:0.175002  probRad:0.128565
+totprob:0.303567
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.147183  100.007  0.400576  0.4  0.42  54.5982  148.413  15  16  6  7
+flavor_end
+p1:100.007  temp:0.400576
+min_p1:0  bin_p1:2
+index_p1:50  index_T:30
+ct1_loop:4
+max_e2:15  xw:0.778125  temp:0.400576
+ct2_loop:105
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.400576  0.907385  0  99.9336  0.378111  0.311742  100  0.418062
+2-2_end
+KINT:1
+pc4:100  0  99.9919  0
+Elab:100
+vc0:0  0.00101638  -0.000148979  0
+pc4:100.015  -0.101646  100.007  0
+Ejp:100.015  qhat0:0.907385
+prob23:0.423514
+=============
+ti:1.5
+np:1
+momentum99.9336  0.0576913  99.9247  -0.414062
+mass:1.27
+position:0.000173189  0.899925  -0.00124301
+bulklinear:
+1.5  0.000173189  0.899925  -0.000828674  0.373965  0.00058107  -6.24097e-05  -5.6799e-08  0
+bulklinear_end:
+E:99.9394 T:0.373965
+KPamp:2  PLen:99.9313  KPsig:5
+KTamp:2  temp0:0.373965  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.617843
+qhat:0.128391
+ID:4  Tint_lrf[i]:0.899959  dt_lrf:0.300017
+time_gluon:0.899959  delta_tg:0.2  time_num:5
+temp_med:0.373965  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:99.9394  delta_HQener:2   HQenergy_num:49
+input:1.62  1.621  1.671  1.673  214  218.4  218.3  222.8  
+rate_EGrid_low:1.66044  rate_EGrid_high:1.66224  max_EGrid_low:217.41  max_EGrid_high :221.889  
+ delta_Ng_1:1.66218
+ delta_Ng_2:0.292266
+KTfactor:1  runKT:0.617843
+radng[i]:0.180574
+probCol:0.164155  probRad:0.165209
+totprob:0.329364
+=============
+ti:1.8
+np:1
+momentum99.9336  0.0576913  99.9247  -0.414062
+mass:1.27
+position:0.000346377  1.1999  -0.00248602
+bulklinear:
+1.8  0.000346377  1.1999  -0.00138112  0.352668  -0.00125504  0.00285215  -2.02847e-07  0
+bulklinear_end:
+E:99.6485 T:0.352668
+KPamp:2  PLen:99.6404  KPsig:5
+KTamp:2  temp0:0.352668  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.622933
+qhat:0.108565
+ID:4  Tint_lrf[i]:1.1991  dt_lrf:0.299144
+time_gluon:1.1991  delta_tg:0.2  time_num:7
+temp_med:0.352668  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:99.6485  delta_HQener:2   HQenergy_num:49
+input:2.405  2.408  2.48  2.483  361.7  369.2  369.5  377.1  
+rate_EGrid_low:2.44502  rate_EGrid_high:2.44802  max_EGrid_low:365.862  max_EGrid_high :373.416  
+ delta_Ng_1:2.4475
+ delta_Ng_2:0.432616
+KTfactor:1  runKT:0.622933
+radng[i]:0.269491
+probCol:0.147617  probRad:0.236232
+totprob:0.383849
+=============
+ti:2.1
+np:1
+momentum99.9336  0.0576913  99.9247  -0.414062
+mass:1.27
+position:0.000519566  1.49987  -0.00372903
+bulklinear:
+2.1  0.000519566  1.49987  -0.00177573  0.334341  -0.00330113  0.0106476  -4.43327e-07  0
+bulklinear_end:
+E:98.8752 T:0.334341
+KPamp:2  PLen:98.867  KPsig:5
+KTamp:2  temp0:0.334341  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.628074
+qhat:0.0932935
+ID:4  Tint_lrf[i]:1.49593  dt_lrf:0.296822
+time_gluon:1.49593  delta_tg:0.2  time_num:8
+temp_med:0.334341  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:98.8752  delta_HQener:2   HQenergy_num:49
+input:2.545  2.548  2.629  2.631  417.4  425.9  426.8  435.7  
+rate_EGrid_low:2.61793  rate_EGrid_high:2.62006  max_EGrid_low:425.561  max_EGrid_high :434.408  
+ delta_Ng_1:2.61886
+ delta_Ng_2:0.463237
+KTfactor:1  runKT:0.628074
+radng[i]:0.290947
+probCol:0.142386  probRad:0.252445
+totprob:0.394831
+=============
+ti:2.4
+np:1
+momentum99.9336  0.0576913  99.9247  -0.414062
+mass:1.27
+position:0.000692755  1.79984  -0.00497205
+bulklinear:
+2.39999  0.000692755  1.79984  -0.00207169  0.317841  -0.00476478  0.0243705  -7.69209e-07  0
+bulklinear_end:
+E:97.5279 T:0.317841
+KPamp:2  PLen:97.5197  KPsig:5
+KTamp:2  temp0:0.317841  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.633574
+qhat:0.0809106
+ID:4  Tint_lrf[i]:1.7887  dt_lrf:0.292778
+time_gluon:1.7887  delta_tg:0.2  time_num:10
+temp_med:0.317841  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:97.5279  delta_HQener:2   HQenergy_num:48
+input:3.086  3.089  3.189  3.194  555.8  567.3  569.1  581  
+rate_EGrid_low:3.14453  rate_EGrid_high:3.14866  max_EGrid_low:563.357  max_EGrid_high :575.084  
+ delta_Ng_1:3.14769
+ delta_Ng_2:0.554392
+KTfactor:1  runKT:0.633574
+radng[i]:0.351248
+probCol:0.13227  probRad:0.296191
+totprob:0.428461
+=============
+ti:2.7
+np:1
+momentum99.9336  0.0576913  99.9247  -0.414062
+mass:1.27
+position:0.000865944  2.09982  -0.00621506
+bulklinear:
+2.69999  0.000865944  2.09982  -0.00230188  0.302671  -0.00567609  0.0440586  -1.16536e-06  0
+bulklinear_end:
+E:95.6252 T:0.302671
+KPamp:2  PLen:95.6167  KPsig:5
+KTamp:2  temp0:0.302671  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.639548
+qhat:0.0706387
+ID:4  Tint_lrf[i]:2.07577  dt_lrf:0.287066
+time_gluon:2.07577  delta_tg:0.2  time_num:11
+temp_med:0.302671  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:95.6252  delta_HQener:2   HQenergy_num:47
+input:3.137  3.14  3.247  3.251  592.3  605.1  607.3  620.1  
+rate_EGrid_low:3.19576  rate_EGrid_high:3.19929  max_EGrid_low:600.312  max_EGrid_high :613.112  
+ delta_Ng_1:3.19863
+ delta_Ng_2:0.558455
+KTfactor:1  runKT:0.639548
+radng[i]:0.357159
+probCol:0.129928  probRad:0.300339
+totprob:0.430267
+=============
+ti:3
+np:1
+momentum99.9336  0.0576913  99.9247  -0.414062
+mass:1.27
+position:0.00103913  2.39979  -0.00745807
+bulklinear:
+2.99999  0.00103913  2.39979  -0.00248603  0.28832  -0.00567892  0.0706342  -1.61613e-06  0
+bulklinear_end:
+E:93.1096 T:0.28832
+KPamp:2  PLen:93.101  KPsig:5
+KTamp:2  temp0:0.28832  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.646228
+qhat:0.0618628
+ID:4  Tint_lrf[i]:2.35528  dt_lrf:0.279514
+time_gluon:2.35528  delta_tg:0.2  time_num:13
+temp_med:0.28832  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:93.1096  delta_HQener:2   HQenergy_num:46
+input:3.445  3.449  3.569  3.574  705.6  721.1  724.2  740.2  
+rate_EGrid_low:3.52735  rate_EGrid_high:3.53201  max_EGrid_low:717.952  max_EGrid_high :733.784  
+ delta_Ng_1:3.52993
+ delta_Ng_2:0.607975
+KTfactor:1  runKT:0.646228
+radng[i]:0.39289
+probCol:0.123952  probRad:0.324897
+totprob:0.448849
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+11  4  -2  -2  0.142972  93.101  0.28832  0.28  0.3  54.5982  148.413  9  10  6  7
+flavor_end
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  11  0.28832  0.470081  0  100.354  0.663296  1.08373  99.9336  1.08771
+2-2_end
+KINT:1
+pc4:99.9336  0.0576913  99.9247  -0.414062
+Elab:99.9336
+vc0:0  -0.00567876  0.0706322  -0.00745955
+pc4:93.1096  0.606512  93.0985  0.306861
+Ejp:93.1096  qhat0:0.470081
+prob23:0.723845
+2-3
+4  0.28832  0.470081  -0.00567876  0.0706322  -0.00745955  
+97.0863  0.818491  97.071  0.827844  
+2.54947  -0.655219  1.49107  -1.96143  
+1.08373  -0.00687698  -0.034478  -1.08316  
+1.38162  -0.112457  1.32815  -0.363641  
+1.08771  0  2.35528  93.1096  
+447.807  0.00736363  0.992636
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+11  4  -3  -3  0.152533  99.9575  0.437139  0.42  0.44  54.5982  148.413  16  17  6  7
+flavor_end
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  11  0.437139  1.08059  0  99.982  0.392654  0.374686  100  0.139758
+2-2_end
+KINT:1
+pc4:100  0  99.9919  0
+Elab:100
+vc0:0  0.000455472  0.000344884  0
+pc4:99.9655  -0.0455393  99.9575  0
+Ejp:99.9655  qhat0:1.08059
+prob23:0.105701
+=============
+ti:1.2
+np:1
+momentum99.982  0.138381  99.9739  0.01957
+mass:1.27
+position:0.000415217  0.599951  5.87205e-05
+bulklinear:
+1.2  0.000415217  0.599951  4.89337e-05  0.400575  0.00102105  -0.000149242  9.74407e-10  0
+bulklinear_end:
+E:99.9969 T:0.400575
+KPamp:2  PLen:99.9888  KPsig:5
+KTamp:2  temp0:0.400575  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.61221
+qhat:0.156414
+ID:4  Tint_lrf[i]:0.599941  dt_lrf:0.300045
+time_gluon:0.599941  delta_tg:0.2  time_num:4
+temp_med:0.400575  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:99.9969  delta_HQener:2   HQenergy_num:49
+input:1.284  1.285  1.324  1.325  154.5  157.8  157.7  160.7  
+rate_EGrid_low:1.2886  rate_EGrid_high:1.2896  max_EGrid_low:154.868  max_EGrid_high :158.134  
+ delta_Ng_1:1.2896
+ delta_Ng_2:0.22479
+KTfactor:1  runKT:0.61221
+radng[i]:0.137619
+probCol:0.175018  probRad:0.128569
+totprob:0.303587
+=============
+ti:1.5
+np:1
+momentum99.982  0.138381  99.9739  0.01957
+mass:1.27
+position:0.000830434  0.899927  0.000117441
+bulklinear:
+1.5  0.000830434  0.899927  7.82939e-05  0.373964  0.000593567  -6.47563e-05  5.36642e-09  0
+bulklinear_end:
+E:99.9884 T:0.373964
+KPamp:2  PLen:99.9804  KPsig:5
+KTamp:2  temp0:0.373964  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.617803
+qhat:0.128382
+ID:4  Tint_lrf[i]:0.89996  dt_lrf:0.300019
+time_gluon:0.89996  delta_tg:0.2  time_num:5
+temp_med:0.373964  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:99.9884  delta_HQener:2   HQenergy_num:49
+input:1.62  1.621  1.671  1.673  214  218.4  218.3  222.8  
+rate_EGrid_low:1.66044  rate_EGrid_high:1.66223  max_EGrid_low:217.409  max_EGrid_high :221.889  
+ delta_Ng_1:1.66222
+ delta_Ng_2:0.292256
+KTfactor:1  runKT:0.617803
+radng[i]:0.180556
+probCol:0.164112  probRad:0.165194
+totprob:0.329306
+=============
+ti:1.8
+np:1
+momentum99.982  0.138381  99.9739  0.01957
+mass:1.27
+position:0.00124565  1.1999  0.000176161
+bulklinear:
+1.8  0.00124565  1.1999  9.78674e-05  0.352667  -0.00122997  0.00284785  1.43739e-08  0
+bulklinear_end:
+E:99.698 T:0.352667
+KPamp:2  PLen:99.6899  KPsig:5
+KTamp:2  temp0:0.352667  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.622892
+qhat:0.108557
+ID:4  Tint_lrf[i]:1.19911  dt_lrf:0.299148
+time_gluon:1.19911  delta_tg:0.2  time_num:7
+temp_med:0.352667  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:99.698  delta_HQener:2   HQenergy_num:49
+input:2.405  2.408  2.48  2.483  361.7  369.2  369.5  377.1  
+rate_EGrid_low:2.44501  rate_EGrid_high:2.44801  max_EGrid_low:365.861  max_EGrid_high :373.414  
+ delta_Ng_1:2.44756
+ delta_Ng_2:0.432604
+KTfactor:1  runKT:0.622892
+radng[i]:0.269465
+probCol:0.147578  probRad:0.236212
+totprob:0.38379
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+11  4  -2  -2  0.14139  99.6899  0.352667  0.34  0.36  54.5982  148.413  12  13  6  7
+flavor_end
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  11  0.352667  0.70332  0  99.3339  2.43467  1.78657  99.982  0.766862
+2-2_end
+KINT:1
+pc4:99.982  0.138381  99.9739  0.01957
+Elab:99.982
+vc0:0  -0.00122997  0.00284785  0.000176176
+pc4:99.698  0.261181  99.6895  0.00198054
+Ejp:99.698  qhat0:0.70332
+prob23:0.615472
+2-3
+4  0.352667  0.70332  -0.00122997  0.00284785  0.000176176  
+99.154  -0.258877  99.1424  -0.796011  
+1.53436  0.570355  -0.824242  -1.16172  
+1.78657  -0.00387699  -0.63548  -1.66973  
+1.08022  -0.176975  1.02027  0.307568  
+0.766862  0  1.19911  99.698  
+219.955  0.00841182  0.991588
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:2.1
+np:1
+momentum99.154  -0.258877  99.1424  -0.796011
+mass:1.27
+position:0.000462396  1.49987  -0.00223225
+bulklinear:
+2.1  0.000462396  1.49987  -0.00106298  0.334341  -0.00330319  0.0106478  -2.65382e-07  0
+bulklinear_end:
+E:98.1021 T:0.334341
+KPamp:2  PLen:98.0939  KPsig:5
+KTamp:2  temp0:0.334341  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.62874
+qhat:0.0933994
+ID:4  Tint_lrf[i]:0.296817  dt_lrf:0.296817
+time_gluon:0.296817  delta_tg:0.2  time_num:2
+temp_med:0.334341  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:98.1021  delta_HQener:2   HQenergy_num:49
+input:0.1025  0.1026  0.1071  0.1072  13.81  14.07  14.22  14.5  
+rate_EGrid_low:0.106494  rate_EGrid_high:0.106594  max_EGrid_low:14.1659  max_EGrid_high :14.4433  
+ delta_Ng_1:0.106499
+ delta_Ng_2:0.0188591
+KTfactor:1  runKT:0.62874
+radng[i]:0.0118575
+probCol:0.189152  probRad:0.0117874
+totprob:0.20094
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.141012  98.0939  0.334341  0.32  0.34  54.5982  148.413  11  12  6  7
+flavor_end
+p1:98.0939  temp:0.334341
+min_p1:0  bin_p1:2
+index_p1:49  index_T:23
+ct1_loop:3
+max_e2:15  xw:3.25229  temp:0.334341
+ct2_loop:30
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.334341  0.632122  0  99.0793  1.15709  1.0824  99.154  0.149692
+2-2_end
+KINT:1
+pc4:99.154  -0.258877  99.1424  -0.796011
+Elab:99.154
+vc0:0  -0.00330318  0.0106478  -0.00223251
+pc4:98.1021  0.0669203  98.0922  -0.575816
+Ejp:98.1021  qhat0:0.632122
+prob23:0.0586616
+=============
+ti:2.4
+np:1
+momentum99.0793  -0.191268  99.0688  -0.661764
+mass:1.27
+position:-0.000116739  1.79984  -0.00423599
+bulklinear:
+2.4  -0.000116739  1.79984  -0.001765  0.317841  -0.00480077  0.0243732  -6.55335e-07  0
+bulklinear_end:
+E:96.6917 T:0.317841
+KPamp:2  PLen:96.6834  KPsig:5
+KTamp:2  temp0:0.317841  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.634318
+qhat:0.0810177
+ID:4  Tint_lrf[i]:0.589588  dt_lrf:0.292771
+time_gluon:0.589588  delta_tg:0.2  time_num:4
+temp_med:0.317841  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:96.6917  delta_HQener:2   HQenergy_num:48
+input:0.6929  0.6936  0.7224  0.7232  100.6  102.8  103.5  105.7  
+rate_EGrid_low:0.709665  rate_EGrid_high:0.710421  max_EGrid_low:102.248  max_EGrid_high :104.448  
+ delta_Ng_1:0.709926
+ delta_Ng_2:0.125199
+KTfactor:1  runKT:0.634318
+radng[i]:0.0794159
+probCol:0.174547  probRad:0.0763443
+totprob:0.250891
+=============
+ti:2.7
+np:1
+momentum99.0793  -0.191268  99.0688  -0.661764
+mass:1.27
+position:-0.000695874  2.0998  -0.00623973
+bulklinear:
+2.69999  -0.000695874  2.0998  -0.00231101  0.302671  -0.00575712  0.0440622  -1.16998e-06  0
+bulklinear_end:
+E:94.8045 T:0.302671
+KPamp:2  PLen:94.796  KPsig:5
+KTamp:2  temp0:0.302671  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.640306
+qhat:0.0707375
+ID:4  Tint_lrf[i]:0.876644  dt_lrf:0.287056
+time_gluon:0.876644  delta_tg:0.2  time_num:5
+temp_med:0.302671  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:94.8045  delta_HQener:2   HQenergy_num:47
+input:0.9712  0.9723  1.012  1.013  148  151.5  152.4  155.6  
+rate_EGrid_low:0.992999  rate_EGrid_high:0.994046  max_EGrid_low:150.351  max_EGrid_high :153.691  
+ delta_Ng_1:0.99342
+ delta_Ng_2:0.173679
+KTfactor:1  runKT:0.640306
+radng[i]:0.111208
+probCol:0.167084  probRad:0.105247
+totprob:0.272331
+=============
+ti:3
+np:1
+momentum99.0793  -0.191268  99.0688  -0.661764
+mass:1.27
+position:-0.00127501  2.39977  -0.00824347
+bulklinear:
+2.99999  -0.00127501  2.39977  -0.00274783  0.288322  -0.00581941  0.0706356  -1.78629e-06  0
+bulklinear_end:
+E:92.3105 T:0.288322
+KPamp:2  PLen:92.3018  KPsig:5
+KTamp:2  temp0:0.288322  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.647002
+qhat:0.0619544
+ID:4  Tint_lrf[i]:1.15615  dt_lrf:0.279505
+time_gluon:1.15615  delta_tg:0.2  time_num:7
+temp_med:0.288322  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:92.3105  delta_HQener:2   HQenergy_num:46
+input:1.524  1.525  1.584  1.586  249.7  255.1  256.2  261.8  
+rate_EGrid_low:1.56386  rate_EGrid_high:1.56553  max_EGrid_low:254.019  max_EGrid_high :259.551  
+ delta_Ng_1:1.56412
+ delta_Ng_2:0.26978
+KTfactor:1  runKT:0.647002
+radng[i]:0.174548
+probCol:0.155054  probRad:0.160164
+totprob:0.315218
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+=============
+ti:1.2
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.599952  0
+bulklinear:
+1.2  0  0.599952  0  0.400576  0.00101638  -0.000148979  0  0
+bulklinear_end:
+E:100.015 T:0.400576
+KPamp:2  PLen:100.007  KPsig:5
+KTamp:2  temp0:0.400576  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.612196
+qhat:0.156412
+ID:4  Tint_lrf[i]:0.599941  dt_lrf:0.300045
+time_gluon:0.599941  delta_tg:0.2  time_num:4
+temp_med:0.400576  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:100.015  delta_HQener:2   HQenergy_num:50
+input:1.285  1.286  1.325  1.327  157.8  160.8  160.7  164.1  
+rate_EGrid_low:1.28961  rate_EGrid_high:1.29072  max_EGrid_low:158.134  max_EGrid_high :161.18  
+ delta_Ng_1:1.28961
+ delta_Ng_2:0.224788
+KTfactor:1  runKT:0.612196
+radng[i]:0.137614
+probCol:0.175002  probRad:0.128565
+totprob:0.303567
+=============
+ti:1.5
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.899927  0
+bulklinear:
+1.5  0  0.899927  0  0.373965  0.000577765  -6.17945e-05  0  0
+bulklinear_end:
+E:100.006 T:0.373965
+KPamp:2  PLen:99.9981  KPsig:5
+KTamp:2  temp0:0.373965  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.617789
+qhat:0.12838
+ID:4  Tint_lrf[i]:0.89996  dt_lrf:0.300019
+time_gluon:0.89996  delta_tg:0.2  time_num:5
+temp_med:0.373965  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:100.006  delta_HQener:2   HQenergy_num:50
+input:1.621  1.623  1.673  1.675  218.4  222.8  222.8  227.3  
+rate_EGrid_low:1.66224  rate_EGrid_high:1.66424  max_EGrid_low:221.889  max_EGrid_high :226.369  
+ delta_Ng_1:1.66224
+ delta_Ng_2:0.292253
+KTfactor:1  runKT:0.617789
+radng[i]:0.18055
+probCol:0.164096  probRad:0.165189
+totprob:0.329285
+=============
+ti:1.8
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  1.1999  0
+bulklinear:
+1.8  0  1.1999  0  0.352668  -0.00126476  0.00285386  0  0
+bulklinear_end:
+E:99.7151 T:0.352668
+KPamp:2  PLen:99.707  KPsig:5
+KTamp:2  temp0:0.352668  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.622878
+qhat:0.108555
+ID:4  Tint_lrf[i]:1.19911  dt_lrf:0.299145
+time_gluon:1.19911  delta_tg:0.2  time_num:7
+temp_med:0.352668  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:99.7151  delta_HQener:2   HQenergy_num:49
+input:2.405  2.408  2.48  2.483  361.7  369.2  369.5  377.1  
+rate_EGrid_low:2.44503  rate_EGrid_high:2.44803  max_EGrid_low:365.863  max_EGrid_high :373.416  
+ delta_Ng_1:2.4476
+ delta_Ng_2:0.432597
+KTfactor:1  runKT:0.622878
+radng[i]:0.269455
+probCol:0.147563  probRad:0.236204
+totprob:0.383767
+=============
+ti:2.1
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  1.49988  0
+bulklinear:
+2.1  0  1.49988  0  0.334341  -0.00332025  0.0106501  0  0
+bulklinear_end:
+E:98.9412 T:0.334341
+KPamp:2  PLen:98.9331  KPsig:5
+KTamp:2  temp0:0.334341  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.628018
+qhat:0.0932846
+ID:4  Tint_lrf[i]:1.49593  dt_lrf:0.296824
+time_gluon:1.49593  delta_tg:0.2  time_num:8
+temp_med:0.334341  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:98.9412  delta_HQener:2   HQenergy_num:49
+input:2.545  2.548  2.629  2.631  417.4  425.9  426.8  435.7  
+rate_EGrid_low:2.61793  rate_EGrid_high:2.62006  max_EGrid_low:425.561  max_EGrid_high :434.408  
+ delta_Ng_1:2.61893
+ delta_Ng_2:0.463207
+KTfactor:1  runKT:0.628018
+radng[i]:0.290902
+probCol:0.142333  probRad:0.252411
+totprob:0.394744
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.140173  98.9331  0.334341  0.32  0.34  54.5982  148.413  11  12  6  7
+flavor_end
+p1:98.9331  temp:0.334341
+min_p1:0  bin_p1:2
+index_p1:49  index_T:23
+ct1_loop:9
+max_e2:15  xw:1.98797  temp:0.334341
+ct2_loop:170
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.334341  0.632123  0  99.8656  0.79367  0.659292  100  0.499756
+2-2_end
+KINT:1
+pc4:100  5.55112e-17  99.9919  0
+Elab:100
+vc0:0  -0.00332025  0.0106501  0
+pc4:98.9412  0.330277  98.9325  0
+Ejp:98.9412  qhat0:0.632123
+prob23:0.639431
+2-3
+4  0.334341  0.632123  -0.00332025  0.0106501  0  
+98.6765  -0.20764  98.6666  0.55287  
+0.915914  0.276168  -0.231251  -0.842112  
+0.659292  -0.00389513  -0.501317  -0.428172  
+1.06684  -0.0724235  1.05527  -0.13893  
+0.499756  0  1.49593  98.9412  
+256.061  0.0080357  0.991964
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:2.4
+np:1
+momentum98.6765  -0.20764  98.6666  0.55287
+mass:1.27
+position:-0.000631275  1.79985  0.00168086
+bulklinear:
+2.4  -0.000631275  1.79985  0.000700357  0.317841  -0.00482352  0.0243768  2.60041e-07  0
+bulklinear_end:
+E:96.2993 T:0.317841
+KPamp:2  PLen:96.2909  KPsig:5
+KTamp:2  temp0:0.317841  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.63467
+qhat:0.0810679
+ID:4  Tint_lrf[i]:0.292773  dt_lrf:0.292773
+time_gluon:0.292773  delta_tg:0.2  time_num:2
+temp_med:0.317841  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:96.2993  delta_HQener:2   HQenergy_num:48
+input:0.0894  0.08946  0.09364  0.0937  12.32  12.59  12.73  12.96  
+rate_EGrid_low:0.0918093  rate_EGrid_high:0.0918693  max_EGrid_low:12.553  max_EGrid_high :12.8002  
+ delta_Ng_1:0.0918183
+ delta_Ng_2:0.0162028
+KTfactor:1  runKT:0.63467
+radng[i]:0.0102834
+probCol:0.187526  probRad:0.0102307
+totprob:0.197757
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.141345  96.2909  0.317841  0.3  0.32  54.5982  148.413  10  11  6  7
+flavor_end
+p1:96.2909  temp:0.317841
+min_p1:0  bin_p1:2
+index_p1:48  index_T:21
+ct1_loop:5
+max_e2:15  xw:1.82246  temp:0.317841
+ct2_loop:83
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.317841  0.571272  0  98.7461  0.513136  0.582721  98.6765  0.144495
+2-2_end
+KINT:1
+pc4:98.6765  -0.20764  98.6666  0.55287
+Elab:98.6765
+vc0:0  -0.00482352  0.0243768  0.00168111
+pc4:96.2993  0.262668  96.2898  0.388956
+Ejp:96.2993  qhat0:0.571272
+prob23:0.0517339
+=============
+ti:2.7
+np:1
+momentum98.7461  -0.334948  98.7362  0.48464
+mass:1.27
+position:-0.00164888  2.09982  0.00315324
+bulklinear:
+2.7  -0.00164888  2.09982  0.00116787  0.302671  -0.00580553  0.0440671  5.91244e-07  0
+bulklinear_end:
+E:94.4855 T:0.302671
+KPamp:2  PLen:94.477  KPsig:5
+KTamp:2  temp0:0.302671  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.640603
+qhat:0.0707757
+ID:4  Tint_lrf[i]:0.579828  dt_lrf:0.287056
+time_gluon:0.579828  delta_tg:0.2  time_num:4
+temp_med:0.302671  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:94.4855  delta_HQener:2   HQenergy_num:47
+input:0.6078  0.6085  0.6353  0.6359  90.26  92.28  93.05  95.04  
+rate_EGrid_low:0.622491  rate_EGrid_high:0.623138  max_EGrid_low:91.7505  max_EGrid_high :93.7545  
+ delta_Ng_1:0.622648
+ delta_Ng_2:0.108916
+KTfactor:1  runKT:0.640603
+radng[i]:0.0697719
+probCol:0.17453  probRad:0.0673935
+totprob:0.241923
+=============
+ti:3
+np:1
+momentum98.7461  -0.334948  98.7362  0.48464
+mass:1.27
+position:-0.00266648  2.39979  0.00462562
+bulklinear:
+3  -0.00266648  2.39979  0.00154187  0.288322  -0.00590184  0.0706404  1.00235e-06  0
+bulklinear_end:
+E:91.9996 T:0.288322
+KPamp:2  PLen:91.9909  KPsig:5
+KTamp:2  temp0:0.288322  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.647306
+qhat:0.0619897
+ID:4  Tint_lrf[i]:0.859332  dt_lrf:0.279504
+time_gluon:0.859332  delta_tg:0.2  time_num:5
+temp_med:0.288322  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:91.9996  delta_HQener:2   HQenergy_num:45
+input:0.8517  0.8525  0.89  0.8909  130.5  133.4  134.2  137.1  
+rate_EGrid_low:0.877144  rate_EGrid_high:0.87801  max_EGrid_low:132.958  max_EGrid_high :135.858  
+ delta_Ng_1:0.87801
+ delta_Ng_2:0.151526
+KTfactor:1  runKT:0.647306
+radng[i]:0.0980834
+probCol:0.167736  probRad:0.0934267
+totprob:0.261163
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+=============
+ti:1.2
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.599952  0
+bulklinear:
+1.2  0  0.599952  0  0.400576  0.00101638  -0.000148979  0  0
+bulklinear_end:
+E:100.015 T:0.400576
+KPamp:2  PLen:100.007  KPsig:5
+KTamp:2  temp0:0.400576  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.612196
+qhat:0.156412
+ID:4  Tint_lrf[i]:0.599941  dt_lrf:0.300045
+time_gluon:0.599941  delta_tg:0.2  time_num:4
+temp_med:0.400576  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:100.015  delta_HQener:2   HQenergy_num:50
+input:1.285  1.286  1.325  1.327  157.8  160.8  160.7  164.1  
+rate_EGrid_low:1.28961  rate_EGrid_high:1.29072  max_EGrid_low:158.134  max_EGrid_high :161.18  
+ delta_Ng_1:1.28961
+ delta_Ng_2:0.224788
+KTfactor:1  runKT:0.612196
+radng[i]:0.137614
+probCol:0.175002  probRad:0.128565
+totprob:0.303567
+=============
+ti:1.5
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.899927  0
+bulklinear:
+1.5  0  0.899927  0  0.373965  0.000577765  -6.17945e-05  0  0
+bulklinear_end:
+E:100.006 T:0.373965
+KPamp:2  PLen:99.9981  KPsig:5
+KTamp:2  temp0:0.373965  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.617789
+qhat:0.12838
+ID:4  Tint_lrf[i]:0.89996  dt_lrf:0.300019
+time_gluon:0.89996  delta_tg:0.2  time_num:5
+temp_med:0.373965  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:100.006  delta_HQener:2   HQenergy_num:50
+input:1.621  1.623  1.673  1.675  218.4  222.8  222.8  227.3  
+rate_EGrid_low:1.66224  rate_EGrid_high:1.66424  max_EGrid_low:221.889  max_EGrid_high :226.369  
+ delta_Ng_1:1.66224
+ delta_Ng_2:0.292253
+KTfactor:1  runKT:0.617789
+radng[i]:0.18055
+probCol:0.164096  probRad:0.165189
+totprob:0.329285
+=============
+ti:1.8
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  1.1999  0
+bulklinear:
+1.8  0  1.1999  0  0.352668  -0.00126476  0.00285386  0  0
+bulklinear_end:
+E:99.7151 T:0.352668
+KPamp:2  PLen:99.707  KPsig:5
+KTamp:2  temp0:0.352668  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.622878
+qhat:0.108555
+ID:4  Tint_lrf[i]:1.19911  dt_lrf:0.299145
+time_gluon:1.19911  delta_tg:0.2  time_num:7
+temp_med:0.352668  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:99.7151  delta_HQener:2   HQenergy_num:49
+input:2.405  2.408  2.48  2.483  361.7  369.2  369.5  377.1  
+rate_EGrid_low:2.44503  rate_EGrid_high:2.44803  max_EGrid_low:365.863  max_EGrid_high :373.416  
+ delta_Ng_1:2.4476
+ delta_Ng_2:0.432597
+KTfactor:1  runKT:0.622878
+radng[i]:0.269455
+probCol:0.147563  probRad:0.236204
+totprob:0.383767
+=============
+ti:2.1
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  1.49988  0
+bulklinear:
+2.1  0  1.49988  0  0.334341  -0.00332025  0.0106501  0  0
+bulklinear_end:
+E:98.9412 T:0.334341
+KPamp:2  PLen:98.9331  KPsig:5
+KTamp:2  temp0:0.334341  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.628018
+qhat:0.0932846
+ID:4  Tint_lrf[i]:1.49593  dt_lrf:0.296824
+time_gluon:1.49593  delta_tg:0.2  time_num:8
+temp_med:0.334341  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:98.9412  delta_HQener:2   HQenergy_num:49
+input:2.545  2.548  2.629  2.631  417.4  425.9  426.8  435.7  
+rate_EGrid_low:2.61793  rate_EGrid_high:2.62006  max_EGrid_low:425.561  max_EGrid_high :434.408  
+ delta_Ng_1:2.61893
+ delta_Ng_2:0.463207
+KTfactor:1  runKT:0.628018
+radng[i]:0.290902
+probCol:0.142333  probRad:0.252411
+totprob:0.394744
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+11  4  3  3  0.140173  98.9331  0.334341  0.32  0.34  54.5982  148.413  11  12  6  7
+flavor_end
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  11  0.334341  0.632123  0  99.3031  1.40217  0.705242  100  0.783289
+2-2_end
+KINT:1
+pc4:100  5.55112e-17  99.9919  0
+Elab:100
+vc0:0  -0.00332025  0.0106501  0
+pc4:98.9412  0.330277  98.9325  0
+Ejp:98.9412  qhat0:0.632123
+prob23:0.639431
+2-3
+4  0.334341  0.632123  -0.00332025  0.0106501  0  
+97.0933  1.65665  97.0665  0.927601  
+1.54002  -0.508848  0.84325  -1.18392  
+0.705242  -0.0036815  -0.391719  -0.586437  
+2.07189  -1.15149  1.69051  -0.330115  
+0.783289  0  1.49593  98.9412  
+256.061  0.0080357  0.991964
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:2.4
+np:1
+momentum97.0933  1.65665  97.0665  0.927601
+mass:1.27
+position:0.00511874  1.7998  0.00286611
+bulklinear:
+2.4  0.00511874  1.7998  0.00119421  0.317838  -0.00456707  0.0243561  4.43415e-07  0
+bulklinear_end:
+E:94.7636 T:0.317838
+KPamp:2  PLen:94.7551  KPsig:5
+KTamp:2  temp0:0.317838  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.636065
+qhat:0.0812653
+ID:4  Tint_lrf[i]:0.292802  dt_lrf:0.292802
+time_gluon:0.292802  delta_tg:0.2  time_num:2
+temp_med:0.317838  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:94.7636  delta_HQener:2   HQenergy_num:47
+input:0.08931  0.0894  0.09349  0.09364  12.08  12.32  12.47  12.73  
+rate_EGrid_low:0.0916828  rate_EGrid_high:0.0918069  max_EGrid_low:12.3014  max_EGrid_high :12.5527  
+ delta_Ng_1:0.0917302
+ delta_Ng_2:0.0162287
+KTfactor:1  runKT:0.636065
+radng[i]:0.0103225
+probCol:0.189431  probRad:0.0102694
+totprob:0.1997
+=============
+ti:2.7
+np:1
+momentum97.0933  1.65665  97.0665  0.927601
+mass:1.27
+position:0.0102375  2.09971  0.00573222
+bulklinear:
+2.69999  0.0102375  2.09971  0.00212305  0.302664  -0.00518013  0.0440427  1.07486e-06  0
+bulklinear_end:
+E:92.9145 T:0.302664
+KPamp:2  PLen:92.9058  KPsig:5
+KTamp:2  temp0:0.302664  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.642087
+qhat:0.0709618
+ID:4  Tint_lrf[i]:0.57989  dt_lrf:0.287088
+time_gluon:0.57989  delta_tg:0.2  time_num:4
+temp_med:0.302664  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:92.9145  delta_HQener:2   HQenergy_num:46
+input:0.6073  0.6078  0.6347  0.6353  88.37  90.26  90.83  93.05  
+rate_EGrid_low:0.621897  rate_EGrid_high:0.62245  max_EGrid_low:89.6805  max_EGrid_high :91.7463  
+ delta_Ng_1:0.62215
+ delta_Ng_2:0.109135
+KTfactor:1  runKT:0.642087
+radng[i]:0.0700744
+probCol:0.176353  probRad:0.0676756
+totprob:0.244028
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.14388  92.9058  0.302664  0.3  0.32  54.5982  148.413  10  11  6  7
+flavor_end
+p1:92.9058  temp:0.302664
+min_p1:0  bin_p1:2
+index_p1:46  index_T:20
+ct1_loop:3
+max_e2:15  xw:0.206045  temp:0.302664
+ct2_loop:106
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.302664  0.518016  0  97.0506  0.104174  0.0614109  97.0933  0.143127
+2-2_end
+KINT:1
+pc4:97.0933  1.65665  97.0665  0.927601
+Elab:97.0933
+vc0:0  -0.00518005  0.044042  0.00573324
+pc4:92.9145  2.14902  92.8802  0.382649
+Ejp:92.9145  qhat0:0.518016
+prob23:0.277327
+2-3
+4  0.302664  0.518016  -0.00518005  0.044042  0.00573324  
+96.1311  1.345  96.1079  1.0141  
+0.234051  0.141849  0.184598  -0.0241331  
+0.0614109  -0.000671545  -0.0124349  -0.0601351  
+0.789604  0.169132  0.761488  -0.122497  
+0.143127  0  0.57989  92.9145  
+55.3738  0.00774618  0.992254
+2-3_end
+nrad0
+test1
+test2
+=============
+ti:3
+np:1
+momentum96.1311  1.345  96.1079  1.0141
+mass:1.27
+position:0.0144349  2.39964  0.00889695
+bulklinear:
+2.99999  0.0144349  2.39964  0.00296566  0.288306  -0.00484038  0.0706364  1.92812e-06  0
+bulklinear_end:
+E:89.5684 T:0.288306
+KPamp:2  PLen:89.5594  KPsig:5
+KTamp:2  temp0:0.288306  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.649731
+qhat:0.0622616
+ID:4  Tint_lrf[i]:0.27952  dt_lrf:0.27952
+time_gluon:0.27952  delta_tg:0.2  time_num:2
+temp_med:0.288306  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:89.5684  delta_HQener:2   HQenergy_num:44
+input:0.06643  0.06649  0.06988  0.06996  9.279  9.501  9.598  9.826  
+rate_EGrid_low:0.0687111  rate_EGrid_high:0.0687843  max_EGrid_low:9.48992  max_EGrid_high :9.71588  
+ delta_Ng_1:0.0687685
+ delta_Ng_2:0.0119227
+KTfactor:1  runKT:0.649731
+radng[i]:0.00774652
+probCol:0.186696  probRad:0.00771659
+totprob:0.194413
+=============
+ti:0.9
+np:1
+momentum100  0  99.9919  0
+mass:1.27
+position:0  0.299976  0
+bulklinear:
+0.9  0  0.299976  0  0.437139  0.000455472  0.000344884  0  0
+bulklinear_end:
+E:99.9655 T:0.437139
+KPamp:2  PLen:99.9575  KPsig:5
+KTamp:2  temp0:0.437139  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.605281
+qhat:0.201087
+ID:4  Tint_lrf[i]:0.299897  dt_lrf:0.299897
+time_gluon:0.299897  delta_tg:0.2  time_num:2
+temp_med:0.437139  temp_min:0.15  delta_temp:0.005  temp_num:57
+HQenergy:99.9655  delta_HQener:2   HQenergy_num:49
+input:0.2284  0.2287  0.2361  0.2363  23.76  24.27  24.26  24.78  
+rate_EGrid_low:0.231694  rate_EGrid_high:0.231952  max_EGrid_low:23.9739  max_EGrid_high :24.4882  
+ delta_Ng_1:0.231947
+ delta_Ng_2:0.0399758
+KTfactor:1  runKT:0.605281
+radng[i]:0.0241966
+probCol:0.202262  probRad:0.0239062
+totprob:0.226168
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+11  4  1  1  0.152533  99.9575  0.437139  0.42  0.44  54.5982  148.413  16  17  6  7
+flavor_end
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  11  0.437139  1.08059  0  98.8688  2.21603  1.08488  100  1.94082
+2-2_end
+KINT:1
+pc4:100  0  99.9919  0
+Elab:100
+vc0:0  0.000455472  0.000344884  0
+pc4:99.9655  -0.0455393  99.9575  0
+Ejp:99.9655  qhat0:1.08059
+prob23:0.105701
+=============
+ti:1.2
+np:1
+momentum98.8688  -1.93205  98.8416  -0.184143
+mass:1.27
+position:-0.00586248  0.599893  -0.000558748
+bulklinear:
+1.2  -0.00586248  0.599893  -0.000465624  0.400576  0.00097921  -0.000131819  -9.27125e-09  0
+bulklinear_end:
+E:98.8837 T:0.400576
+KPamp:2  PLen:98.8756  KPsig:5
+KTamp:2  temp0:0.400576  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.613113
+qhat:0.156623
+ID:4  Tint_lrf[i]:0.599942  dt_lrf:0.300045
+time_gluon:0.599942  delta_tg:0.2  time_num:4
+temp_med:0.400576  temp_min:0.15  delta_temp:0.005  temp_num:50
+HQenergy:98.8837  delta_HQener:2   HQenergy_num:49
+input:1.284  1.285  1.324  1.325  154.5  157.8  157.7  160.7  
+rate_EGrid_low:1.28861  rate_EGrid_high:1.28961  max_EGrid_low:154.869  max_EGrid_high :158.134  
+ delta_Ng_1:1.28905
+ delta_Ng_2:0.224992
+KTfactor:1  runKT:0.613113
+radng[i]:0.137946
+probCol:0.176015  probRad:0.128854
+totprob:0.304869
+=============
+ti:1.5
+np:1
+momentum98.8688  -1.93205  98.8416  -0.184143
+mass:1.27
+position:-0.011725  0.899811  -0.0011175
+bulklinear:
+1.5  -0.011725  0.899811  -0.000744998  0.373963  0.00040141  1.5355e-05  -5.10595e-08  0
+bulklinear_end:
+E:98.868 T:0.373963
+KPamp:2  PLen:98.8598  KPsig:5
+KTamp:2  temp0:0.373963  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.618729
+qhat:0.128566
+ID:4  Tint_lrf[i]:0.899939  dt_lrf:0.299997
+time_gluon:0.899939  delta_tg:0.2  time_num:5
+temp_med:0.373963  temp_min:0.15  delta_temp:0.005  temp_num:44
+HQenergy:98.868  delta_HQener:2   HQenergy_num:49
+input:1.62  1.621  1.671  1.673  214  218.4  218.3  222.8  
+rate_EGrid_low:1.66042  rate_EGrid_high:1.66221  max_EGrid_low:217.408  max_EGrid_high :221.887  
+ delta_Ng_1:1.6612
+ delta_Ng_2:0.292477
+KTfactor:1  runKT:0.618729
+radng[i]:0.180964
+probCol:0.1651  probRad:0.165535
+totprob:0.330634
+=============
+ti:1.8
+np:1
+momentum98.8688  -1.93205  98.8416  -0.184143
+mass:1.27
+position:-0.0175874  1.19973  -0.00167624
+bulklinear:
+1.8  -0.0175874  1.19973  -0.000931247  0.352661  -0.00172425  0.00300736  -1.36765e-07  0
+bulklinear_end:
+E:98.5687 T:0.352661
+KPamp:2  PLen:98.5605  KPsig:5
+KTamp:2  temp0:0.352661  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.623845
+qhat:0.10872
+ID:4  Tint_lrf[i]:1.19903  dt_lrf:0.299089
+time_gluon:1.19903  delta_tg:0.2  time_num:7
+temp_med:0.352661  temp_min:0.15  delta_temp:0.005  temp_num:40
+HQenergy:98.5687  delta_HQener:2   HQenergy_num:49
+input:2.405  2.408  2.48  2.483  361.7  369.2  369.5  377.1  
+rate_EGrid_low:2.44492  rate_EGrid_high:2.44792  max_EGrid_low:365.851  max_EGrid_high :373.405  
+ delta_Ng_1:2.44577
+ delta_Ng_2:0.432876
+KTfactor:1  runKT:0.623845
+radng[i]:0.270048
+probCol:0.148485  probRad:0.236657
+totprob:0.385142
+=============
+ti:2.1
+np:1
+momentum98.8688  -1.93205  98.8416  -0.184143
+mass:1.27
+position:-0.0234499  1.49965  -0.00223499
+bulklinear:
+2.1  -0.0234499  1.49965  -0.00106428  0.334333  -0.00417467  0.010841  -2.65679e-07  0
+bulklinear_end:
+E:97.7957 T:0.334333
+KPamp:2  PLen:97.7874  KPsig:5
+KTamp:2  temp0:0.334333  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.629008
+qhat:0.0934356
+ID:4  Tint_lrf[i]:1.49577  dt_lrf:0.296744
+time_gluon:1.49577  delta_tg:0.2  time_num:8
+temp_med:0.334333  temp_min:0.15  delta_temp:0.005  temp_num:36
+HQenergy:97.7957  delta_HQener:2   HQenergy_num:48
+input:2.542  2.545  2.626  2.629  408.8  417.4  418.1  426.8  
+rate_EGrid_low:2.6148  rate_EGrid_high:2.6178  max_EGrid_low:416.86  max_EGrid_high :425.547  
+ delta_Ng_1:2.61749
+ delta_Ng_2:0.463609
+KTfactor:1  runKT:0.629008
+radng[i]:0.291614
+probCol:0.14324  probRad:0.252943
+totprob:0.396183
+=============
+ti:2.4
+np:1
+momentum98.8688  -1.93205  98.8416  -0.184143
+mass:1.27
+position:-0.0293124  1.79956  -0.00279374
+bulklinear:
+2.4  -0.0293124  1.79956  -0.00116406  0.317837  -0.00608563  0.0245497  -4.32128e-07  0
+bulklinear_end:
+E:96.4613 T:0.317837
+KPamp:2  PLen:96.4529  KPsig:5
+KTamp:2  temp0:0.317837  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.634525
+qhat:0.0810444
+ID:4  Tint_lrf[i]:1.78847  dt_lrf:0.292695
+time_gluon:1.78847  delta_tg:0.2  time_num:10
+temp_med:0.317837  temp_min:0.15  delta_temp:0.005  temp_num:33
+HQenergy:96.4613  delta_HQener:2   HQenergy_num:48
+input:3.086  3.089  3.189  3.194  555.8  567.3  569.1  581  
+rate_EGrid_low:3.14445  rate_EGrid_high:3.14859  max_EGrid_low:563.348  max_EGrid_high :575.075  
+ delta_Ng_1:3.14541
+ delta_Ng_2:0.554767
+KTfactor:1  runKT:0.634525
+radng[i]:0.352014
+probCol:0.13307  probRad:0.29673
+totprob:0.4298
+=============
+ti:2.7
+np:1
+momentum98.8688  -1.93205  98.8416  -0.184143
+mass:1.27
+position:-0.0351749  2.09948  -0.00335249
+bulklinear:
+2.7  -0.0351749  2.09948  -0.00124166  0.302672  -0.0075049  0.0442017  -6.28434e-07  0
+bulklinear_end:
+E:94.5804 T:0.302672
+KPamp:2  PLen:94.5719  KPsig:5
+KTamp:2  temp0:0.302672  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.640514
+qhat:0.0707647
+ID:4  Tint_lrf[i]:2.07545  dt_lrf:0.286988
+time_gluon:2.07545  delta_tg:0.2  time_num:11
+temp_med:0.302672  temp_min:0.15  delta_temp:0.005  temp_num:30
+HQenergy:94.5804  delta_HQener:2   HQenergy_num:47
+input:3.137  3.14  3.247  3.251  592.3  605.1  607.3  620.1  
+rate_EGrid_low:3.19578  rate_EGrid_high:3.19931  max_EGrid_low:600.315  max_EGrid_high :613.115  
+ delta_Ng_1:3.1968
+ delta_Ng_2:0.558973
+KTfactor:1  runKT:0.640514
+radng[i]:0.35803
+probCol:0.13071  probRad:0.300948
+totprob:0.431658
+=============
+ti:3
+np:1
+momentum98.8688  -1.93205  98.8416  -0.184143
+mass:1.27
+position:-0.0410373  2.3994  -0.00391124
+bulklinear:
+3  -0.0410373  2.3994  -0.00130375  0.288328  -0.00817307  0.0707183  -8.47261e-07  0
+bulklinear_end:
+E:92.0968 T:0.288328
+KPamp:2  PLen:92.0881  KPsig:5
+KTamp:2  temp0:0.288328  hydro_Tc:0.165  KTsig:0.00825
+KPfactor:1  preKT:1
+Kfactor:0.647209
+qhat:0.0619824
+ID:4  Tint_lrf[i]:2.35491  dt_lrf:0.279452
+time_gluon:2.35491  delta_tg:0.2  time_num:13
+temp_med:0.288328  temp_min:0.15  delta_temp:0.005  temp_num:27
+HQenergy:92.0968  delta_HQener:2   HQenergy_num:46
+input:3.445  3.449  3.569  3.574  705.6  721.1  724.2  740.2  
+rate_EGrid_low:3.52753  rate_EGrid_high:3.5322  max_EGrid_low:717.98  max_EGrid_high :733.813  
+ delta_Ng_1:3.52776
+ delta_Ng_2:0.60859
+KTfactor:1  runKT:0.647209
+radng[i]:0.393885
+probCol:0.12468  probRad:0.325568
+totprob:0.450248
+YES
+flavor(CT, KATTC0, KATT2, KATT3, RTE, PLen, T, T1, T2, E1, E2, iT1, iT2, iE1, iE2):
+12  4  21  21  0.144095  92.0881  0.288328  0.28  0.3  54.5982  148.413  9  10  6  7
+flavor_end
+p1:92.0881  temp:0.288328
+min_p1:0  bin_p1:2
+index_p1:46  index_T:18
+ct1_loop:6
+max_e2:15  xw:0.0737904  temp:0.288328
+ct2_loop:125
+flag1:0  flag2:0
+mass9:1.27
+mass10:1.27
+mass5:1.27
+2-2
+CT,temp0,qhat0,vc0,pc0,pc2,pc3,pc4,qt:  12  0.288328  0.470106  0  98.5101  0.37999  0.0212599  98.8688  0.1282
+2-2_end
+KINT:1
+pc4:98.8688  -1.93205  98.8416  -0.184143
+Elab:98.8688
+vc0:0  -0.008173  0.0707178  -0.00391207
+pc4:92.0968  -1.15068  92.0807  0.189868
+Ejp:92.0968  qhat0:0.470106
+prob23:0.723086
+the program ends at:
+Current Time: 2025-12-15 19:20:40
+the program costs:
+39s: 0h 0m 39s
+counth100 0

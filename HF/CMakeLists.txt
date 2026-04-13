@@ -1,0 +1,14 @@
+cmake_minimum_required (VERSION 2.6)
+project (LBT CXX Fortran)
+
+set(CMAKE_Fortran_FLAGS "${CMAKE_Fortran_FLAGS} -fno-align-commons")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mcmodel=medium")
+
+add_subdirectory (src)
+
+#install dependencies
+install (DIRECTORY tables DESTINATION ${PROJECT_NAME})
+install (DIRECTORY hydroProfile DESTINATION ${PROJECT_NAME})
+install (FILES parameters.dat DESTINATION ${PROJECT_NAME})
+#install (FILES parameters_g.dat parameters_ud.dat parameters_s.dat DESTINATION ${PROJECT_NAME})
+

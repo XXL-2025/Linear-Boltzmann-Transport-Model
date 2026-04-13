@@ -1,0 +1,44 @@
+//...Masterswitch
+LBTswitch  //switch on/off Linear Boltzmann Transport
+1
+Kradiation  //radiation switch
+0
+Kprimary  //only include primary interaction 
+1
+corswitch //switch to V tau-eta coordinate
+1
+tauswitch  //switch to tau-eta coordinate (default t-z coordinate)
+0
+switchCoLBT_Hydro  //design for CoLBT_Hydro model
+0
+Ecut  //energy cut (for free streaming particles or hydro source term)
+2
+Kqhat0  //Debye screening mass setting
+2
+alphas   //strong coupling constant setting
+0.3
+ncall   nprint   NUM1  //...regular MC control
+1000    1        -33
+time0     timend     dt  //dt means dtau if tauswitch is on
+0.6       10.0       0.3
+switchsingle  //switch for the single parton test
+1
+ener     mass     Kjet     px0     py0     pz0     en0     Xinitial    Yinitial     Zinitial  //only work if(switchsingle==1) //single parton setting
+100.008    1.27      4       0.0     100.0   0.0     100.008   0.0         0.0          0.0
+switchmedium  //switch for artificial(uniform or static) medium
+0.0
+temp0medium    VXmedium    VYmedium     VZmedium  //only work if(switchmedium==1) //artificial medium setting  //...flow velocity setting
+0.3            0.0         0.0          0.0
+tau0     tauend     dtau  //only work if(tauswitch==1)  //...tau-eta coordinate
+0.0      7.0       0.5
+tauhydro0      nxhydro      nyhydro      netahydro      dtauhydro  //...Hydroprofile setting
+0.6           73           73           33             0.3
+dxh      dyh      detah      dtauh   //...Hydroprofile setting
+0.3      0.3      0.3        0.3   	
+x0h      y0h      eta0h      tau0h   //...Hydroprofile setting
+-10.8    -10.8    -4.8       0.6 	 
+rate_path
+/home/hyj/lxx/LBT_MERGE_version2/input
+hydro_path
+/home/hyj/lxx/LBT_MERGE_version2/input/Hydroprofile_5020_010_visc
+
